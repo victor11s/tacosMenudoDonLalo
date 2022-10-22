@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import LandingPage from './landingPage/LandingPage';
 import { Row, Col } from 'react-bootstrap'
