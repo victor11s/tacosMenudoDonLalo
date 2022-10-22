@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-
+import LandingPage from './landingPage/LandingPage';
 import { Row, Col } from 'react-bootstrap'
+import { Routes, Route } from 'react-router-dom';
 
 
 
@@ -9,16 +10,13 @@ const App = () => {
 
   return (
     <div>
-      <Row>
-        <Col>1 of 2</Col>
-        <Col>2 of 2</Col>
-      </Row>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
 
-      <Row>
-        <Col>1 of 3</Col>
-        <Col>2 of 3</Col>
-        <Col>3 of 3</Col>
-      </Row>
+
+      </Routes>
+      
+
 
     </div>
 
