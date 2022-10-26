@@ -1,12 +1,13 @@
 import React from 'react'
-import { Navbar } from 'react-bootstrap'
+import { Nav } from 'react-bootstrap'
 
 export default function defaultNavbar() {
   return (
     <div>
-        <Navbar>
+        <Nav>
             
-        </Navbar>
+        </Nav>
     </div>
   )
 }
+
