@@ -1,8 +1,7 @@
 
 import './App.css';
 import LandingPage from './landingPage/LandingPage';
-import { Row, Col } from 'react-bootstrap'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Router, BrowserRouter } from 'react-router-dom';
 
 
 
@@ -10,14 +9,13 @@ const App = () => {
 
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
 
 
-      </Routes>
-      
-
-
+        </Routes>
+      </BrowserRouter>
     </div>
 
   );
