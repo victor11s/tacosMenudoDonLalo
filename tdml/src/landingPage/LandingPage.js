@@ -2,6 +2,9 @@
 import {Row, Col} from 'react-bootstrap'
 
 import  {Component} from 'react'
+import Feature1 from './components/Feature1'
+
+
 
 export default class LandingPage extends Component {
     render() {
@@ -9,7 +12,7 @@ export default class LandingPage extends Component {
         <div>
             <Row className="p-5">
                 <Col>
-                    <h1>Test</h1>
+                <Feature1/>
                 </Col>
                 <Col>
                     <h1>Test2</h1>
