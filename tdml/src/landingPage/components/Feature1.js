@@ -4,6 +4,8 @@ import {Row, Col} from 'react-bootstrap'
 import {Container} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
+import taco from './images/taconSF.png'
+
 export default function Feature1() {
   return (
     <div>
@@ -32,7 +34,7 @@ export default function Feature1() {
 
                     </Col>
                     <Col>
-                        <img class="rounded mx-auto d-block" src={img1} style={{maxHeight: '30rem'}} alt="Imagen de lata Ener-G Ultra" />
+                        <img class="rounded mx-auto d-block" src={taco} style={{maxHeight: '30rem'}} alt="Imagen de lata Ener-G Ultra" />
                     </Col>
                 </Row>
             </div>
