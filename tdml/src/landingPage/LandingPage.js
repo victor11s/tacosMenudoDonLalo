@@ -3,7 +3,7 @@ import {Row, Col, Container} from 'react-bootstrap'
 
 import  {Component} from 'react'
 import Feature1 from './components/feature1'
-import DefaultNavbar from './components/defaultNavbar';
+import DefaultNavbar from '../globalComponents/defaultNavbar';
 
 
 
