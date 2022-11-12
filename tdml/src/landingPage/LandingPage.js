@@ -10,12 +10,12 @@ import DefaultNavbar from './components/defaultNavbar';
 export default class LandingPage extends Component {
     render() {
         return (
-        <div>
+        <div className="TacosColor">
             <DefaultNavbar/>
             <Container>
                 
             </Container>
-            <Row className="p-5">
+            <Row className="p-5" >
                 <Col>
                 <Feature1/>
                 </Col>
