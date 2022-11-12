@@ -11,6 +11,11 @@ export default function Feature1() {
         <div className="TacosColor">
             <Row className="p-5">
                 <Col>
+                    <div>
+                        
+
+                    </div>
+
                     <img class="rounded mx-auto d-block" src={taco} Style={"max-height : 100rem; margin-top: 20%"} alt="Imagen de lata Ener-G Ultra" />
                 </Col>
                 <Col className="d-flex  justify-content-center my-auto" Style={"background: #E65940; padding: 10px"}>
@@ -18,6 +23,7 @@ export default function Feature1() {
                         <Row >
                             <h1 class="display-1 lh-1 mb-3">Tacos y Menudo</h1>
                             <h1 class="display-2 lh-6 mb-3"><b>Don Lalo</b></h1>
+                            
                             <h3 class="display-6 lh-6 mb-3">
                                 Tradición familiar de la comida hacia las mesas mexicanas. Consiéntente con nuestros deliciosos tacos.  
                             </h3>
