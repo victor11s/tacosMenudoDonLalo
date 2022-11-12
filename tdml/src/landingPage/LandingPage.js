@@ -15,12 +15,9 @@ export default class LandingPage extends Component {
             <Container>
                 
             </Container>
-            <Row className="p-5" >
+            <Row>
                 <Col>
                 <Feature1/>
-                </Col>
-                <Col>
-                    <h1>Test2</h1>
                 </Col>
             </Row>
         </div>
