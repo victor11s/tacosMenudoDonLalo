@@ -2,7 +2,7 @@
 import {Row, Col} from 'react-bootstrap'
 
 import  {Component} from 'react'
-import Feature1 from './components/Feature1'
+import Feature1 from './components/feature1'
 
 
 
