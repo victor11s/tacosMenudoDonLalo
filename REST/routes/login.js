@@ -1,4 +1,4 @@
-var router = require('express').Router()
+const router = require('express').Router();
 
 router.get('/login', function (req, res) {
     res.json({ message: 'Vas a iniciar sesión' })

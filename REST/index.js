@@ -10,7 +10,7 @@ const db = mysql.createPool({
     user: 'root',
     password: '',
     database: 'tacos_y_menudo_don_lalo'
-})
+});
 
 //Importamos body-parser para analizar los cuerpos de las solicitudes entrantes como middleware.
 const bodyParser = require('body-parser');
@@ -19,9 +19,14 @@ const bodyParser = require('body-parser');
 const router = require('./routes/router');
 app.use('/api', router);
 
+//añadimos cors
+const cors = require('cors');
+app.use(cors());
+
 //Configuramos la instancia app de express
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 
 

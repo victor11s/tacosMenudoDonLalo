@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 function DefaultNavbar() {
     return (
         <>
-            <Navbar bg="light" variant="light" Style={"padding: 10px 0 10px 0; margin-bottom: 10px"}>
+            <Navbar bg="light" variant="light" Style={ "padding: 10px 0 10px 0; margin-bottom: 10px"}>
                 <Container>
                     <Navbar.Brand href="#home">Tacos y Menudo Don Lalo</Navbar.Brand>
                     <div Style={"width: match-parent; text-align: right;"}>
