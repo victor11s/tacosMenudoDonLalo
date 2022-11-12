@@ -11,7 +11,7 @@ export default class LoginForm extends Component {
                 </legend>
                 <Form.Group className="mb-3" controlId="formEmail">
                     <Form.Label>Correo electrónico</Form.Label>
-                    <Form.Control type="email" placeholder="Introduce tu email" value={"prueba@udem.edu"} />
+                    <Form.Control name="formEmail" type="email" placeholder="Introduce tu email" value={"prueba@udem.edu"} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formPassword">
                     <Form.Label>Contraseña</Form.Label>
