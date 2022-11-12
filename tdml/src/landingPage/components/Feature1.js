@@ -13,7 +13,7 @@ export default function Feature1() {
                 <Col>
                     <img class="rounded mx-auto d-block" src={taco} Style={"max-height : 100rem; margin-top: 20%"} alt="Imagen de lata Ener-G Ultra" />
                 </Col>
-                <Col className="d-flex  justify-content-center my-auto">
+                <Col className="d-flex  justify-content-center my-auto" Style={"background: #E65940; padding: 10px"}>
                     <Container Style={"text-align: center"}>
                         <Row >
                             <h1 class="display-1 lh-1 mb-3">Tacos y Menudo</h1>
@@ -24,7 +24,7 @@ export default function Feature1() {
                         </Row>
                         <Row>
                             <Link to="/catalogo">
-                                <Button type="button" variant="secondary">
+                            <Button variant="light">
                                     Conoce Más
                                 </Button>
                             </Link>
