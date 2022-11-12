@@ -4,6 +4,8 @@ import { Component } from 'react'
 
 import DefaultNavbar from '../globalComponents/defaultNavbar';
 
+import FoodCards from './componentsC/FoodCards';
+
 
 
 
@@ -23,7 +25,15 @@ export default class Catalogo extends Component {
                 </Row>
 
                 <Container>
+                    <Row >
+
+                    <FoodCards/>
+                    <FoodCards/>
                     
+                    
+                    </Row>
+
+
 
                     </Container>
 
