@@ -29,10 +29,10 @@ export default class LoginForm extends Component {
 
     handleSubmit = async e => {
         e.preventDefault();
-        await Axios.post(this.ligaAxios+'login',
+        await Axios.post((this.ligaAxios+'login'),
         {
-            formEmail: this.state.form.nombre_usuario,
-            formPassword: this.state.form.password
+            nombre_usuario: this.state.form.nombre_usuario,
+            password: this.state.form.password
         }).then(res => {
             console.log(res.data);
         })
