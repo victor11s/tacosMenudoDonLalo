@@ -24,13 +24,13 @@ export default function Feature1() {
                             <h1 class="display-1 lh-1 mb-3">Tacos y Menudo</h1>
                             <h1 class="display-2 lh-6 mb-3"><b>Don Lalo</b></h1>
                             
-                            <h3 class="display-6 lh-6 mb-3">
+                            <h3 class="display-6 lh-6 ">
                                 Tradición familiar de la comida hacia las mesas mexicanas. Consiéntente con nuestros deliciosos tacos.  
                             </h3>
                         </Row>
                         <Row>
                             <Link to="/catalogo">
-                            <Button variant="light">
+                            <Button variant="light" className='m-5'>
                                     Conoce Más
                                 </Button>
                             </Link>
