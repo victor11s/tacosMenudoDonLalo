@@ -1,23 +1,29 @@
 import React from 'react'
+import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 function DefaultNavbar() {
-  return (
-    <>
-      <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="#home">Tacos y Menudo Don Lalo</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </>
-  );
+    return (
+        <>
+            <Navbar bg="light" variant="light" Style={"padding: 10px 0 10px 0;"}>
+                <Container>
+                    <Navbar.Brand href="#home">Tacos y Menudo Don Lalo</Navbar.Brand>
+                    <div Style={"width: match-parent; text-align: right;"}>
+                        <Nav className="me-auto">
+                            <Nav.Link href="#home">
+                                <Button variant="light">Iniciar sesión</Button>
+                            </Nav.Link>
+                            <Nav.Link href="#features">
+                                <Button variant="outline-secondary">Registrarse</Button>
+                            </Nav.Link>
+                        </Nav>
+                    </div>
+                </Container>
+            </Navbar>
+        </>
+    );
 }
 
 export default DefaultNavbar;
