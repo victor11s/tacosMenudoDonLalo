@@ -9,11 +9,11 @@ export default class LoginForm extends Component {
                 <legend>
                     Iniciar Sesión
                 </legend>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="formEmail">
                     <Form.Label>Correo electrónico</Form.Label>
                     <Form.Control type="email" placeholder="Introduce tu email" value={"prueba@udem.edu"} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formPassword">
                     <Form.Label>Contraseña</Form.Label>
                     <Form.Control type="password" placeholder="Contraseña" value={666} />
                 </Form.Group>

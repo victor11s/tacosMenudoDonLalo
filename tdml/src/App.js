@@ -2,7 +2,7 @@
 import './App.css';
 import LandingPage from './landingPage/LandingPage';
 import Login from './login/Login';
-import Singin from './login/Singin';
+import Signin from './login/Signin';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 
@@ -15,7 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path='/login' element={<Login/>} />
-          <Route path='/singin' element={<Singin/>} />
+          <Route path='/signin' element={<Signin/>} />
 
         </Routes>
       </BrowserRouter>

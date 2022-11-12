@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Form } from 'react-bootstrap'
 
-export default class SinginForm extends Component {
+export default class SigninForm extends Component {
     render() {
         return (
             <Form>
