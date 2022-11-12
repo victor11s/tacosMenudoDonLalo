@@ -12,10 +12,10 @@ function DefaultNavbar() {
                     <Navbar.Brand href="#home">Tacos y Menudo Don Lalo</Navbar.Brand>
                     <div Style={"width: match-parent; text-align: right;"}>
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">
+                            <Nav.Link href="/login">
                                 <Button variant="light">Iniciar sesión</Button>
                             </Nav.Link>
-                            <Nav.Link href="#features">
+                            <Nav.Link href="/singin">
                                 <Button variant="outline-secondary">Registrarse</Button>
                             </Nav.Link>
                         </Nav>

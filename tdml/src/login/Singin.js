@@ -1,18 +1,17 @@
 import React from 'react'
 import { Card, Container } from 'react-bootstrap'
 import DefaultNavbar from '../globalComponents/defaultNavbar'
-import LoginForm from './components/LoginForm'
+import SinginForm from './components/SinginForm'
 
-export default function login() {
+export default function singin() {
     return (
         <div>
             <DefaultNavbar />
             <Container>
-                <Card Style={"width: 28rem; margin: auto; margin-top: 10%; padding: 20px"}>
-                    <LoginForm/>
+                <Card Style={"width: 28rem; margin: auto; margin-top: 5%; padding: 20px"}>
+                    <SinginForm/>
                 </Card>
             </Container>
-
         </div>
     )
 }
