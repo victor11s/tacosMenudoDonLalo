@@ -10,7 +10,7 @@ import logo from '../globalComponents/components/images/logoSFF.png';
 function DefaultNavbar() {
     return (
         <>
-            <Navbar bg="light" variant="light" Style={"padding: 10px 0 10px 0;"}>
+            <Navbar bg="light" variant="light" Style={ "padding: 10px 0 10px 0; margin-bottom: 10px"}>
                 <Container>
                     <a class="navbar-brand" href="/">
                         <img src={logo} alt="" width="60"  class="d-inline-block align-text-middle"/>
@@ -21,10 +21,10 @@ function DefaultNavbar() {
                     {/* <Navbar.Brand href="#home">Tacos y Menudo Don Lalo</Navbar.Brand> */}
                     <div Style={"width: match-parent; text-align: right;"}>
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">
+                            <Nav.Link href="/login">
                                 <Button variant="light">Iniciar sesión</Button>
                             </Nav.Link>
-                            <Nav.Link href="#features">
+                            <Nav.Link href="/signin">
                                 <Button variant="outline-secondary">Registrarse</Button>
                             </Nav.Link>
                         </Nav>
