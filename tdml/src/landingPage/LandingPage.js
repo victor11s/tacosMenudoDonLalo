@@ -13,13 +13,14 @@ export default class LandingPage extends Component {
         <div className="TacosColor">
             <DefaultNavbar/>
             <Container>
-                
-            </Container>
             <Row>
                 <Col>
                 <Feature1/>
                 </Col>
             </Row>
+                
+            </Container>
+            
         </div>
         );
     }

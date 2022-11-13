@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../globalComponents/components/images/logo.jpg';
+import logo from '../globalComponents/components/images/logoSFF.png';
 
 
 
@@ -14,7 +14,7 @@ function DefaultNavbar() {
                 <Container>
                     <a class="navbar-brand" href="/">
                         <img src={logo} alt="" width="60"  class="d-inline-block align-text-middle"/>
-                            Tacos y Menudo Don Lalo
+                             Tacos y Menudo Don Lalo
                     </a>
 
 
