@@ -14,7 +14,7 @@ function DefaultNavbar() {
                 <Container>
                     <a class="navbar-brand" href="/">
                         <img src={logo} alt="" width="60"  class="d-inline-block align-text-middle"/>
-                             Tacos y Menudo Don Lalo
+                            Tacos y Menudo Don Lalo
                     </a>
 
 

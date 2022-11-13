@@ -6,6 +6,8 @@ import DefaultNavbar from '../globalComponents/defaultNavbar';
 
 import FoodCards from './componentsC/FoodCards';
 
+import DrinkCards from './componentsC/DrinkCards';
+
 
 
 
@@ -16,26 +18,41 @@ export default class Catalogo extends Component {
         return (
             <div>
                 <DefaultNavbar />
-
-                <Row className='m-5'>
-                    <Col className='d-flex justify-content-center my-auto'>
-                        <h1>Nuestros Productos</h1>
+                <Container>
+                <Row>
+                    <Col sm={2}>
 
                     </Col>
+                    <Col sm={10}>
+                        <Row className='m-5'>
+                            <Col className='d-flex justify-content-center my-auto'>
+                                <h1>Nuestros Productos</h1>
+
+                            </Col>
+                        </Row>
+
+                        <Container>
+                            <Row >
+
+                                <FoodCards />
+                                <DrinkCards/>
+
+
+                            </Row>
+
+
+
+                        </Container>
+                    </Col>
+
                 </Row>
-
-                <Container>
-                    <Row >
-
-                    <FoodCards/>
-                    <FoodCards/>
-                    
-                    
-                    </Row>
-
-
-
                     </Container>
+
+                
+                
+
+
+
 
 
             </div>

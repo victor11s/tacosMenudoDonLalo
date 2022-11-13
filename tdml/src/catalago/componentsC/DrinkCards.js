@@ -2,26 +2,26 @@ import React from 'react'
 
 
 import { Col, Row } from 'react-bootstrap'
-import FoodCard from './FoodCard'
+import DrinkCard from './DrinkCard'
 
-export default function FoodCards() {
+export default function DrinkCards() {
     return (
         <div>
             <Row>
                 <Col className='d-flex justify-content-center my-auto'>
-                    <h2>Tacos y Caldos</h2>
+                    <h2>Bebidas</h2>
 
                 </Col>
             </Row>
             <Row className='m-3'>
                 <Col>
-                    <FoodCard />
+                    <DrinkCard />
                 </Col>
                 <Col>
-                    <FoodCard />
+                    <DrinkCard />
                 </Col>
                 <Col>
-                    <FoodCard />
+                    <DrinkCard />
                 </Col>
             </Row>
 
