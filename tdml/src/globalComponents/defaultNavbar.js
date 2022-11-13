@@ -3,13 +3,22 @@ import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import logo from '../globalComponents/components/images/logo.jpg';
+
+
 
 function DefaultNavbar() {
     return (
         <>
             <Navbar bg="light" variant="light" Style={"padding: 10px 0 10px 0;"}>
                 <Container>
-                    <Navbar.Brand href="#home">Tacos y Menudo Don Lalo</Navbar.Brand>
+                    <a class="navbar-brand" href="/">
+                        <img src={logo} alt="" width="60"  class="d-inline-block align-text-middle"/>
+                            Tacos y Menudo Don Lalo
+                    </a>
+
+
+                    {/* <Navbar.Brand href="#home">Tacos y Menudo Don Lalo</Navbar.Brand> */}
                     <div Style={"width: match-parent; text-align: right;"}>
                         <Nav className="me-auto">
                             <Nav.Link href="#home">
