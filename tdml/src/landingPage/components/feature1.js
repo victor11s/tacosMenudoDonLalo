@@ -6,17 +6,14 @@ import { Link } from 'react-router-dom'
 
 import taco from './images/taconSF.png'
 
+import Feature2 from './Feature2'
+
 export default function Feature1() {
     return (
         <div className="TacosColor">
             <Row className="p-5">
                 <Col>
-                    <div>
-                        
-
-                    </div>
-
-                    <img class="rounded mx-auto d-block" src={taco} Style={"max-height : 100rem; margin-top: 20%"} alt="Imagen de lata Ener-G Ultra" />
+                    <Feature2/>
                 </Col>
                 <Col className="d-flex  justify-content-center my-auto" Style={"background: #E65940; padding: 10px"}>
                     <Container Style={"text-align: center"}>
