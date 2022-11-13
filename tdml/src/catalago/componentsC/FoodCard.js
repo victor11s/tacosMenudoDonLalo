@@ -5,13 +5,15 @@ import { Card, ListGroup, Row, Col, Button, Form } from 'react-bootstrap'
 
 import tacos from './images/tacos.jpg'
 
+import NumericInput from 'react-numeric-input';
+
 
 export default function FoodCard() {
     return (
         <div>
 
-            <Card style={{ width: '18rem' }} className='square border border-3 square border border-secondary'>
-                <Card.Img src={tacos} className='img-fluid ' />
+            <Card style={{ width: '20rem' }} className='square rounded-5 border-secondary'>
+                <img src={tacos} />
                 <Card.Body>
                     <Card.Title>Tacos de Chicharron</Card.Title>
                     <Card.Text>
@@ -34,15 +36,8 @@ export default function FoodCard() {
 
                     <Row className='p-1'>
                         <Col>
-                            <Form.Select aria-label="Default select example">
-                                <option>Selecciona la cantidad</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-
-                            </Form.Select>
+                            <p>Cantidad:</p>
+                            <NumericInput min={0} max={10} value={1} size={1} />
                         </Col>
                     </Row>
 
