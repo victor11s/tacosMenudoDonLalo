@@ -30,13 +30,7 @@ export default function Carrito() {
                 <Offcanvas.Body>
                     <CarritoFoodCards />
                     <CarritoDrinkCards />
-
-
-
                         <h4>Total:$260</h4>
-                    
-
-                    
                 </Offcanvas.Body>
             </Offcanvas>
 

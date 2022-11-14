@@ -1,12 +1,11 @@
 import React from 'react'
-import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../globalComponents/components/images/logoSFF.png';
 import BotonesInicio from './components/BotonesInicio';
 import CarritoBotones from './components/CarritoBotones';
 
+let logged = localStorage.getItem("logged");
 
 
 function DefaultNavbar() {
@@ -22,12 +21,11 @@ function DefaultNavbar() {
 
                     {/* <Navbar.Brand href="#home">Tacos y Menudo Don Lalo</Navbar.Brand> */}
                     
-                        
-
-                            {/* <BotonesInicio/> */}
-                            <CarritoBotones/>
-                        
-                    
+                   
+                            { logged 
+                                ? <CarritoBotones/>
+                                : <BotonesInicio/>
+                            }
                 </Container>
             </Navbar>
         </>
