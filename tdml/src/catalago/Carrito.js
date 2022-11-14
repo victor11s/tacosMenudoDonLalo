@@ -6,7 +6,9 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import carrito from '../globalComponents/components/images/carrito.png'
 
-import CarritoFoodCard from './componentsC/CarritoFoodCard';
+import CarritoFoodCards from './componentsC/CarritoFoodCards';
+
+import CarritoDrinkCards from './componentsC/CarritoDrinkCards';
 
 
 export default function Carrito() {
@@ -26,7 +28,12 @@ export default function Carrito() {
                     <Offcanvas.Title>Carrito</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <CarritoFoodCard />
+                    <CarritoFoodCards />
+                    <CarritoDrinkCards />
+
+
+
+                        <h4>Total:$260</h4>
                     
 
                     

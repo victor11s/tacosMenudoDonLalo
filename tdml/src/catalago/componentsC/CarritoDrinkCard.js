@@ -1,36 +1,29 @@
 import React from 'react'
+
+
 import { Row, Col, Button } from 'react-bootstrap'
 
 
 import { Card, ListGroup, Form } from 'react-bootstrap'
 
-import tacos from '../componentsC/images/tacos.jpg'
+import coca from '../componentsC/images/cocaSF.png'
 
 import NumericInput from 'react-numeric-input';
 
-export default function CarritoFoodCard() {
+export default function CarritoDrinkCard() {
   return (
     <div>
         <Card style={{ width: '10rem' }} className='square rounded-5 border-secondary m-1'>
-                <img src={tacos} />
+                <img src={coca} />
                 <Card.Body>
-                    <Card.Title>Tacos de Chicharron</Card.Title>
-                  
+                    <Card.Title>Coca Cola 355ml</Card.Title>
+                    
                 </Card.Body>
                 <ListGroup className="list-group-flush text-end square border border-2">
                     <ListGroup.Item >Precio: <strong>$18</strong></ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
-                    <Row className='p-1'>
-                        <Col>
-                            <Form.Select aria-label="Default select example">
-                                <option>Selecciona tu tortilla</option>
-                                <option value="1">Maiz</option>
-                                <option value="2">Harina</option>
-                            </Form.Select>
-                        </Col>
-                    </Row>
-
+                    
                     <Row className='p-1'>
                         <Col>
                             <p>Cantidad:</p>
@@ -45,9 +38,6 @@ export default function CarritoFoodCard() {
                     </Row>
                 </Card.Body>
             </Card>
-
-        
     </div>
-    
   )
 }
