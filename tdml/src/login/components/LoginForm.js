@@ -71,7 +71,7 @@ export default class LoginForm extends Component {
                     size="lg"
                     aria-labelledby="contained-modal-title-vcenter"
                     centered>
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton onClick={this.handleClose}>
                         <Modal.Title id="contained-modal-title-vcenter">
                             Nombre de usuario o contraseña incorrecto
                         </Modal.Title>

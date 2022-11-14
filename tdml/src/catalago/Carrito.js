@@ -26,10 +26,7 @@ export default function Carrito() {
                     <Offcanvas.Title>Carrito</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <CarritoFoodCard />
-                    
-
-                    
+                    <CarritoFoodCard />    
                 </Offcanvas.Body>
             </Offcanvas>
 

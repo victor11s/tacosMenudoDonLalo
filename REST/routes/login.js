@@ -23,13 +23,12 @@ router.post('/login', (req, response) => {
             }
         });
 
-
     } else {
         response.send('Introduzca un nombre de usuario y contraseña!');
         response.end();
     }
 
-})
+});
 
 router.post('/signin', (req, response) => {
     const nombre_usuario = req.body.nombre_usuario;
@@ -54,5 +53,5 @@ router.post('/signin', (req, response) => {
         response.end();
     }
 
-})
-module.exports = router
+});
+module.exports = router;

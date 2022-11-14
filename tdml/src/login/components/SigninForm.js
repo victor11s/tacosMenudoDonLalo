@@ -84,7 +84,7 @@ export default class SigninForm extends Component {
                     </Modal.Header>
                     <Modal.Body>
                         <p>
-                            El registro de usuario ha sido exitoso.
+                            El registro de usuario ha sido exitoso.<br/> Inicie sesión con su cuenta.
                         </p>
                     </Modal.Body>
                     <Modal.Footer>
