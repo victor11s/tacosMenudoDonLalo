@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { Card, ListGroup, Row, Col, Button, Form } from 'react-bootstrap'
+import { Card, ListGroup, Row, Col, Button } from 'react-bootstrap'
 
 import coca from './images/cocaSF.png'
 
@@ -12,7 +12,7 @@ export default function DrinkCard() {
     return (
         <div>
 
-            <Card style={{ width: '15rem' }} className='square rounded-5 border-secondary'>
+            <Card style={{ width: '15rem' }} className='square rounded-5 border-secondary mb-4'>
                 <img src={coca} />
                 <Card.Body>
                     <Card.Title>Coca Cola 355ml</Card.Title>
