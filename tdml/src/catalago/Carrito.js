@@ -6,6 +6,8 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import carrito from '../globalComponents/components/images/carrito.png'
 
+import CarritoFoodCard from './componentsC/CarritoFoodCard';
+
 
 export default function Carrito() {
     const [show, setShow] = useState(false);
@@ -24,6 +26,9 @@ export default function Carrito() {
                     <Offcanvas.Title>Carrito</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
+                    <CarritoFoodCard />
+                    
+
                     
                 </Offcanvas.Body>
             </Offcanvas>
