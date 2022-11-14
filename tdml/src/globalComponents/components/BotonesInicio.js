@@ -2,10 +2,6 @@ import React from 'react'
 import { Button } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 
-
-import Nav from 'react-bootstrap/Nav';
-import { Button } from 'react-bootstrap';
-
 export default function BotonesInicio() {
     return (
         <div Style={"width: match-parent; text-align: right;"}>
