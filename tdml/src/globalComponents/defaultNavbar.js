@@ -21,7 +21,7 @@ function DefaultNavbar() {
 
                     {/* <Navbar.Brand href="#home">Tacos y Menudo Don Lalo</Navbar.Brand> */}
                     
-                        
+                   
                             { logged 
                                 ? <CarritoBotones/>
                                 : <BotonesInicio/>
