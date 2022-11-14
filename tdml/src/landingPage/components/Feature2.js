@@ -13,12 +13,12 @@ export default function Feature2() {
 
 
                 <Col>
-                    <img className="rounded mx-auto d-flex align-items-end" src={taco} Style={"max-width : 100%; margin-top: 100% "} alt="Imagen de lata Ener-G Ultra" />
+                    <img className="rounded mx-auto d-flex align-items-end" src={taco} Style={"max-width : 100%; margin-top: 120% "} alt="Imagen de lata Ener-G Ultra" />
 
                 </Col>
 
                 <Col>
-                    <img src={platoSF} Style={"max-width: 100%; margin-top:10% "}  />
+                    <img src={platoSF} Style={"max-width: 140%; margin-top:10% ; margin-left:-3rem"}  />
 
                 </Col>
 
