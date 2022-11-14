@@ -13,7 +13,24 @@ import NumericInput from 'react-numeric-input';
 export default function CarritoDrinkCard() {
   return (
     <div>
-        <Card style={{ width: '10rem' }} className='square rounded-5 border-secondary m-1'>
+        <Row className={'square border border-3 border-dark'}>
+                <Col md={2}>
+                    <img src={coca} Style={'max-width: 50px; margin-top:60%'} />
+                </Col>
+                <Col md={4}>
+                    <h5>Coca Cola 355ml</h5>
+                    <p>Precio: <strong>$18</strong></p>
+                </Col>
+                <Col md={6}>
+                    <p>Cantidad:</p>
+                    <NumericInput min={0} max={10} value={1} size={1} />
+                    
+                </Col>
+                
+
+            </Row>
+
+        {/* <Card style={{ width: '10rem' }} className='square rounded-5 border-secondary m-1'>
                 <img src={coca} />
                 <Card.Body>
                     <Card.Title>Coca Cola 355ml</Card.Title>
@@ -37,7 +54,7 @@ export default function CarritoDrinkCard() {
                         </Col>
                     </Row>
                 </Card.Body>
-            </Card>
+            </Card> */}
     </div>
   )
 }

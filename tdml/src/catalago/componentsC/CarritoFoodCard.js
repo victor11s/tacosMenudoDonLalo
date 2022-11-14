@@ -9,9 +9,30 @@ import tacos from '../componentsC/images/tacos.jpg'
 import NumericInput from 'react-numeric-input';
 
 export default function CarritoFoodCard() {
-  return (
-    <div>
-        <Card style={{ width: '10rem' }} className='square rounded-5 border-secondary m-1'>
+    return (
+        <div>
+
+            <Row className={'square border border-3 border-dark'}>
+                <Col md={2}>
+                    <img src={tacos} Style={'max-width: 50px; margin-top:85%'} />
+                </Col>
+                <Col md={4}>
+                    <h5>Taco de Chicharron</h5>
+                    <p>Precio: <strong>$18</strong></p>
+                </Col>
+                <Col md={6}>
+                    <p>Cantidad:</p>
+                    <NumericInput min={0} max={10} value={1} size={1} />
+                    <Form.Select aria-label="Default select example">
+                        <option>Selecciona tu tortilla</option>
+                        <option value="1">Maiz</option>
+                        <option value="2">Harina</option>
+                    </Form.Select>
+                </Col>
+                
+
+            </Row>
+            {/* <Card style={{ width: '10rem' }} className='square rounded-5 border-secondary m-1'>
                 <img src={tacos} />
                 <Card.Body>
                     <Card.Title>Tacos de Chicharron</Card.Title>
@@ -44,10 +65,10 @@ export default function CarritoFoodCard() {
                         </Col>
                     </Row>
                 </Card.Body>
-            </Card>
+            </Card> */}
 
-        
-    </div>
-    
-  )
+
+        </div>
+
+    )
 }

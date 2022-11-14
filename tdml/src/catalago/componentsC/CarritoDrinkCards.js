@@ -7,13 +7,11 @@ import CarritoDrinkCard from './CarritoDrinkCard'
 export default function CarritoDrinkCards() {
   return (
     <div>
-        <Row >
+        <Row className='m-1'>
             <Col>
                 <CarritoDrinkCard />
             </Col>
-            <Col>
-                <CarritoDrinkCard />
-            </Col>
+            
         </Row>
     </div>
   )
