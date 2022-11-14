@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../globalComponents/components/images/logoSFF.png';
 import BotonesInicio from './components/BotonesInicio';
+import CarritoBotones from './components/CarritoBotones';
 
 
 
@@ -20,13 +21,13 @@ function DefaultNavbar() {
 
 
                     {/* <Navbar.Brand href="#home">Tacos y Menudo Don Lalo</Navbar.Brand> */}
-                    <div Style={"width: match-parent; text-align: right;"}>
-                        <Nav className="me-auto">
+                    
+                        
 
-                            <BotonesInicio/>
-                            {/* Boton de carrito */}
-                        </Nav>
-                    </div>
+                            {/* <BotonesInicio/> */}
+                            <CarritoBotones/>
+                        
+                    
                 </Container>
             </Navbar>
         </>
