@@ -6,7 +6,7 @@ import Feature1 from './components/feature1'
 import DefaultNavbar from '../globalComponents/defaultNavbar';
 
 
-let fondo={  backgroundImage: `url('components/images/tacoFondo.jpg'})`  }
+
 
 
 
