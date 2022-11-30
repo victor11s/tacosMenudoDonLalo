@@ -31,6 +31,15 @@
   background-color: rgb(255, 241, 193);
 }
 
+.FondoImagenP
+{
+  background-image: "/landingPage/components/images/tacoFondo.jp";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /* Para menus persistentes: */
 div.sticky {
   position: -webkit-sticky; /* Safari */
