@@ -31,7 +31,9 @@ export default function Feature1() {
                             <h1 className="display-2 lh-6 mb-3 TextoBlanco"><b>Don Lalo</b></h1>
 
                             <h3 class="display-6 lh-6 TextoBlanco">
-                                Tradición familiar de la comida hacia las mesas mexicanas. Consiéntente con nuestros deliciosos tacos.
+                                Tradición familiar de la comida hacia las mesas mexicanas.
+                                <br/>
+                                Consiéntente con nuestros deliciosos tacos.
                             </h3>
                         </Row>
                         <Row>
