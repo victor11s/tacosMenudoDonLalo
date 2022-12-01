@@ -57,12 +57,12 @@ export default class AgregarBebida extends Component {
                     <Form.Group className="mb-3" controlId="formEmail">
                         <Form.Label>Nombre del Producto</Form.Label>
                         <Form.Control name="nombre_usuario" type="text" placeholder="Introduce tu Producto"
-                            defaultValue={"Taco de "} onChange={this.handleChange} required />
+                            defaultValue={"Bebida sabor "} onChange={this.handleChange} required />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formNumber">
                         <Form.Label>Descripcion</Form.Label>
                         <Form.Control name="descripcion" type="text" placeholder="Introduce la decripcion"
-                            defaultValue={"Rico taco de"} onChange={this.handleChange} required />
+                            defaultValue={"Rico bebida de"} onChange={this.handleChange} required />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formText">
                         <Form.Label>Costo</Form.Label>
