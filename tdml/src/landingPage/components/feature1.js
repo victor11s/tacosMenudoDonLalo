@@ -10,7 +10,7 @@ import Feature2 from './Feature2'
 
 export default function Feature1() {
     return (
-        <div className="TacosColor">
+        <div >
 
             <Row className='p-1 '>
                     <Button href="/catalogo" size="lg" className='ColorBoton'>
