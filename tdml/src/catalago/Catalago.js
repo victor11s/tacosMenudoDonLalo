@@ -15,7 +15,7 @@ export default class Catalogo extends Component {
         return (
             <div>
                 <DefaultNavbar />
-                <Container>
+                <Container className="BordeNegro2">
                     <Row>
                         <Col sm={3}>
                             <div className="sticky">
@@ -30,7 +30,7 @@ export default class Catalogo extends Component {
                             </Row>
                             <Container>
                                 <Row >
-                                    <div id="tyc">
+                                    <div id="tyc" >
                                         <FoodCards />
                                     </div>
                                     <div id="bebidas">

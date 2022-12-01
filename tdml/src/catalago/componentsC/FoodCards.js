@@ -33,7 +33,7 @@ export default function FoodCards() {
                     <h2>Tacos y Caldos</h2>
                 </Col>
             </Row>
-            <Row className='m-3' fluid="true">
+            <Row className='m-3 BordeNegro' fluid="true">
                 {tacosLista.map(platillo => {
                     return (
                         <Col key={platillo.id_articulo + '-col'} >

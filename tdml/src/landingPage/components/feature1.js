@@ -13,7 +13,7 @@ export default function Feature1() {
         <div className="TacosColor">
 
             <Row className='p-1 '>
-                    <Button size="lg" className='ColorBoton'>
+                    <Button href="/catalogo" size="lg" className='ColorBoton'>
                         ORDENA YA!!!
                     </Button>
             </Row>

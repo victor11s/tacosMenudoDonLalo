@@ -27,14 +27,14 @@ export default function DrinkCards() {
     }, []);
 
     return (
-        <div>
-            <Row>
+        <div >
+            <Row >
                 <Col className='d-flex justify-content-center my-auto'>
                     <h2>Bebidas</h2>
 
                 </Col>
             </Row>
-            <Row className='m-3'>
+            <Row className='m-3 BordeNegro' >
                 {bebidasLista.map(bebida => {
                     return (
                         <Col key={bebida.id_articulo + '-col'} >
