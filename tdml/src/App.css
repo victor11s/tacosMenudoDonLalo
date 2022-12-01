@@ -33,14 +33,15 @@
   background-color: #fbe31f;
 }
 
-.FondoImagenP
+.TacoFondo
 {
-  background-image: "/landingPage/components/images/tacoFondo.jp";
+  background-image: url('/src/landingPage/components/images/tacoFondo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
+
 
 .ColorBoton
 {
