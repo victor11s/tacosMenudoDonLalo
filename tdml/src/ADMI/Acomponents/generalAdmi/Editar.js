@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-import { Card, ListGroup, Row, Col, Button, Form, Nav, Container, Tab, Tabs } from 'react-bootstrap'
+
 
 export default class Editar extends Component {
 
@@ -56,23 +56,22 @@ export default class Editar extends Component {
                 <table class="table table-striped table-hover table-bordered border-warning">
                     <thead>
                         <tr>
-                            <th scope="col">Nombre de la Convocatoria</th>
-                            <th scope="col">Monto</th>
-                            <th scope="col">Portal</th>
-                            <th scope="col">Pais que apoya</th>
-                            <th scope="col">Fecha de Cierre</th>
-                            <th scope="col">Editar</th>
+                            <th scope="col">Nombre del Producto</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Costo</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Opciones</th>
+                            
 
 
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">Fondo Global de Innovacion</th>
-                            <td>$500</td>
-                            <td>www.mexico.com</td>
-                            <td>México</td>
-                            <td>2021-05-05</td>
+                            <th scope="row">Taco de Frijol</th>
+                            <td>Rico taco de Frijol</td>
+                            <td>$20</td>
+                            <td>10</td>
                             <td><button type="button" class="btn btn-primary m-1">Editar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
 
 

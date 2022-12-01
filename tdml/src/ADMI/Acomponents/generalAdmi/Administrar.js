@@ -5,6 +5,9 @@ import { Card, ListGroup, Row, Col, Button, Form, Nav, Container, Tab, Tabs } fr
 import DefaultNavbar from '../../../globalComponents/defaultNavbar'
 
 import Editar from './Editar'
+import Agregar from './Agregar'
+import AgregarCaldo from './AgregarCaldo'
+import AgregarBebida from './AgregarBebida'
 
 export default function Administrar() {
     return (
@@ -26,12 +29,18 @@ export default function Administrar() {
                         className="mb-3"
                         justify
                     >
-                        <Tab eventKey="home" title="Agregar">
-
+                        <Tab eventKey="taco" title="Agregar Tacos">
+                            <Agregar />
                         </Tab>
-                        <Tab eventKey="profile" title="Editar">
+                        <Tab eventKey="caldo" title="Agregar Caldos">
+                            <AgregarCaldo />
+                            
+                        </Tab>
+                        <Tab eventKey="bebida" title="Agregar Bebida">
+                            <AgregarBebida />
+                        </Tab>
+                        <Tab eventKey="editar" title="Editar">
                             <Editar/>
-
                         </Tab>
                         
                     </Tabs>

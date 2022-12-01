@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import Axios from 'axios';
 import { Button, Form, Modal } from 'react-bootstrap'
 
-export default class Agregar extends Component {
-
+export default class AgregarCaldo extends Component {
     ligaAxios = 'http://localhost:3001/api/';
 
     /* Insertar datos que se piden de la BD */
@@ -76,7 +75,7 @@ export default class Agregar extends Component {
                             defaultValue={"..."} onChange={this.handleChange} required />
                     </Form.Group>
                     <Button variant="success" type="submit">
-                        Agregar Taco
+                        Agregar Caldo
                     </Button>
 
             </Form>
