@@ -24,7 +24,7 @@ export default function Feature1() {
 
             </Row>
             <Row className="p-1">
-                <Col className="d-flex  justify-content-center my-auto" Style={"background: #1f37fb; padding: 10px"}>
+                <Col className="d-flex  justify-content-center my-auto" Style={"background: #E65940; padding: 10px"}>
                     <Container Style={"text-align: center"}>
                         <Row >
                             <h1 className="display-1 lh-1 mb-3 TextoBlanco">Tacos y Menudo</h1>
