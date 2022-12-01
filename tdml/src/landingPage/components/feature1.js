@@ -12,14 +12,10 @@ export default function Feature1() {
     return (
         <div className="TacosColor">
 
-            <Row className='p-5 '>
-
-                <Button  size="lg" className='ColorBoton'>
-                    ORDENA YA!!!
-                </Button>
-
-
-
+            <Row className='p-1 '>
+                    <Button size="lg" className='ColorBoton'>
+                        ORDENA YA!!!
+                    </Button>
             </Row>
             <Row className="p-1">
                 <Col>
@@ -28,13 +24,13 @@ export default function Feature1() {
 
             </Row>
             <Row className="p-1">
-                <Col className="d-flex  justify-content-center my-auto" Style={"background: #E65940; padding: 10px"}>
+                <Col className="d-flex  justify-content-center my-auto" Style={"background: #1f37fb; padding: 10px"}>
                     <Container Style={"text-align: center"}>
                         <Row >
-                            <h1 class="display-1 lh-1 mb-3">Tacos y Menudo</h1>
-                            <h1 class="display-2 lh-6 mb-3"><b>Don Lalo</b></h1>
+                            <h1 className="display-1 lh-1 mb-3 TextoBlanco">Tacos y Menudo</h1>
+                            <h1 className="display-2 lh-6 mb-3 TextoBlanco"><b>Don Lalo</b></h1>
 
-                            <h3 class="display-6 lh-6 ">
+                            <h3 class="display-6 lh-6 TextoBlanco">
                                 Tradición familiar de la comida hacia las mesas mexicanas. Consiéntente con nuestros deliciosos tacos.
                             </h3>
                         </Row>
