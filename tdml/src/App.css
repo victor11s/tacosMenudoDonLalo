@@ -80,6 +80,11 @@
   
 }
 
+.FondoBlanco
+{
+  background-color: white;
+}
+
 /* Para menus persistentes: */
 div.sticky {
   position: -webkit-sticky; /* Safari */

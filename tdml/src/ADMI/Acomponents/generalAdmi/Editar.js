@@ -52,12 +52,35 @@ export default class Editar extends Component {
 
     render() {
         return (
-            <div>
+            <div class="table-responsive FondoBlanco">
+                <table class="table table-striped table-hover table-bordered border-warning">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre de la Convocatoria</th>
+                            <th scope="col">Monto</th>
+                            <th scope="col">Portal</th>
+                            <th scope="col">Pais que apoya</th>
+                            <th scope="col">Fecha de Cierre</th>
+                            <th scope="col">Editar</th>
 
 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Fondo Global de Innovacion</th>
+                            <td>$500</td>
+                            <td>www.mexico.com</td>
+                            <td>México</td>
+                            <td>2021-05-05</td>
+                            <td><button type="button" class="btn btn-primary m-1">Editar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
 
 
+                        </tr>
 
+                    </tbody>
+
+                </table>
             </div>
         )
     }

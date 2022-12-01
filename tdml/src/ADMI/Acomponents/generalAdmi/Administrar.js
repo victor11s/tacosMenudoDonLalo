@@ -33,9 +33,6 @@ export default function Administrar() {
                             <Editar/>
 
                         </Tab>
-                        <Tab eventKey="longer-tab" title="Eliminar">
-
-                        </Tab>
                         
                     </Tabs>
                 </Row>
