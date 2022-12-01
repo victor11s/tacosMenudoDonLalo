@@ -22,12 +22,6 @@ const router = require('./routes/router');
 app.use('/api', router);
 
 
-
-
-
-
-
-
 app.get('/', function (req, res) {
     res.send('Saludos desde express');
 });
