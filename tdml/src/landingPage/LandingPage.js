@@ -4,7 +4,7 @@ import {Row, Col, Container} from 'react-bootstrap'
 import  {Component} from 'react'
 import Feature1 from './components/feature1'
 import DefaultNavbar from '../globalComponents/defaultNavbar';
-
+import Footer from './components/footer'
 
 
 
@@ -23,6 +23,7 @@ export default class LandingPage extends Component {
             </Row>
                 
             </Container>
+            <Footer></Footer>
             
         </div>
         );
