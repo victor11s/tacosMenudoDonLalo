@@ -13,7 +13,7 @@ router.post('/insert', function (req, response) {
     const noEmptyFields = nombre != "" && tipo != "" && precio_unitario != "" && imagen != "";
 
     if (noUndefinedFields&&noEmptyFields) {
-        const sqlQuery = "INSERT INTO articulo(nombre, descripcion, stock, tipo, precio_unitario, imagen) VALUES ((?), (?), (?), (?), (?), (?));";
+        const sqlQuery = "INSERT INTO articulo(nombre, descripción, stock, tipo, precio_unitario, imagen) VALUES ((?), (?), (?), (?), (?), (?));";
         db.query(sqlQuery, [nombre, descripcion, stock, tipo, precio_unitario, imagen], (error, result) => {
             //res.json({ message: 'Vas a iniciar sesión' });
             console.log(result);
@@ -27,8 +27,8 @@ router.post('/insert', function (req, response) {
         });
 
     } else {
-        response.send('Introduzca correctamente los datos');
-        //console.log([nombre, tipo, precio_unitario, imagen]);
+        response.send(false);
+        console.log([nombre, descripcion, stock, tipo, precio_unitario, imagen]);
         response.end();
     }
 });
