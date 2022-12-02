@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
+import EditarModal1 from './modal/EditarModal1.js';
 
 import { Modal, Button } from 'react-bootstrap';
 
@@ -72,7 +73,9 @@ export default class Editar extends Component {
                             <th scope="col">Nombre del Producto</th>
                             <th scope="col">Descripcion</th>
                             <th scope="col">Costo</th>
-                            <th scope="col">Stock</th>
+                            <th scope="col">Stock</th> 
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Imagen</th>
                             <th scope="col">Opciones</th>
 
 
@@ -85,6 +88,8 @@ export default class Editar extends Component {
                             <td>Rico taco de Frijol</td>
                             <td>$20</td>
                             <td>10</td>
+                            <td>Caldo</td>
+                            <td>Imagen Insertada</td>
                             <td><button  className="btn btn-primary m-1" onClick={this.onClickButton}>Editar</button>
                             <button type="button" class="btn btn-danger">Eliminar</button></td>
 
@@ -95,13 +100,15 @@ export default class Editar extends Component {
 
                 </table>
 
-                <Modal open={this.state.showModal} onClose={this.onClose}>
+                <Modal show={this.state.showModal} onClick={this.onClose}>
                     <Modal.Header closeButton>
                         <Modal.Title>Modal heading</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                    <Modal.Body>
+                        <EditarModal1/>
+                    </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={this.handleClose}>
+                        <Button variant="secondary" onClick={this.onClose}>
                             Close
                         </Button>
                         <Button variant="primary" onClick={this.handleClose}>
