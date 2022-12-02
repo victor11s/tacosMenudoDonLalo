@@ -54,30 +54,46 @@ export default class Agregar extends Component {
     render() {
         return (
             <Form onSubmit={this.handleSubmit}>
-                    
-                    <Form.Group className="mb-3" controlId="formEmail">
-                        <Form.Label>Nombre del Producto</Form.Label>
-                        <Form.Control name="nombre_usuario" type="text" placeholder="Introduce tu Producto"
-                            defaultValue={"Taco de "} onChange={this.handleChange} required />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formNumber">
-                        <Form.Label>Descripcion</Form.Label>
-                        <Form.Control name="descripcion" type="text" placeholder="Introduce la decripcion"
-                            defaultValue={"Rico taco de"} onChange={this.handleChange} required />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formText">
-                        <Form.Label>Costo</Form.Label>
-                        <Form.Control name="costo" type="number" placeholder="Introduce el costo"
-                            defaultValue={"$"} onChange={this.handleChange} required />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formText">
-                        <Form.Label>Stock</Form.Label>
-                        <Form.Control name="stock" type="number" placeholder="Introduce el Stock"
-                            defaultValue={"..."} onChange={this.handleChange} required />
-                    </Form.Group>
-                    <Button variant="success" type="submit">
-                        Agregar Taco
-                    </Button>
+
+                <Form.Group className="mb-3" controlId="formEmail">
+                    <Form.Label>Nombre del Producto</Form.Label>
+                    <Form.Control name="nombre_usuario" type="text" placeholder="Introduce tu Producto"
+                        defaultValue={"Taco de "} onChange={this.handleChange} required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formNumber">
+                    <Form.Label>Descripcion</Form.Label>
+                    <Form.Control name="descripcion" type="text" placeholder="Introduce la decripcion"
+                        defaultValue={"Rico taco de"} onChange={this.handleChange} required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formText">
+                    <Form.Label>Costo</Form.Label>
+                    <Form.Control name="costo" type="number" placeholder="Introduce el costo"
+                        defaultValue={"$"} onChange={this.handleChange} required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formText">
+                    <Form.Label>Stock</Form.Label>
+                    <Form.Control name="stock" type="number" placeholder="Introduce el Stock"
+                        defaultValue={"..."} onChange={this.handleChange} required />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formText">
+                    <Form.Label>Tipo</Form.Label>
+                    <Form.Select name="categoria" aria-label="Default select example" onChange={this.handleChange} required>
+                        <option value="1">Tacos</option>
+                        <option value="2">Caldos</option>
+                        <option value="3">Bebidas</option>
+                    </Form.Select>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formText">
+                    <Form.Label>Imagen</Form.Label>
+                    <Form.Control name="imagen"  placeholder="Introduce la imagen"
+                        defaultValue={"..."} onChange={this.handleChange} required />
+                </Form.Group>
+
+                <Button variant="success" type="submit">
+                    Agregar
+                </Button>
 
             </Form>
         )

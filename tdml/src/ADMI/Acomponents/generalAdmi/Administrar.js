@@ -29,15 +29,8 @@ export default function Administrar() {
                         className="mb-3"
                         justify
                     >
-                        <Tab eventKey="taco" title="Agregar Tacos">
+                        <Tab eventKey="taco" title="Agregar">
                             <Agregar />
-                        </Tab>
-                        <Tab eventKey="caldo" title="Agregar Caldos">
-                            <AgregarCaldo />
-                            
-                        </Tab>
-                        <Tab eventKey="bebida" title="Agregar Bebida">
-                            <AgregarBebida />
                         </Tab>
                         <Tab eventKey="editar" title="Editar">
                             <Editar/>

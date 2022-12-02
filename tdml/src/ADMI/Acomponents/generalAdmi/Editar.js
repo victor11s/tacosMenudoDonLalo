@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
+import EditarModal1 from './modal/EditarModal1.js';
+
+import { Modal, Button } from 'react-bootstrap';
 
 
 export default class Editar extends Component {
@@ -12,7 +15,18 @@ export default class Editar extends Component {
             "nombre_usuario": "",
             "password": "",
         },
-        showModal: false
+            showModal: false
+  
+    }
+
+    onClickButton = e => {
+        e.preventDefault();
+        this.setState({ showModal: true });
+    }
+
+    onClose = e => {
+        e.preventDefault();
+        this.setState({ showModal: false });
     }
 
     handleChange = async e => {
@@ -59,9 +73,11 @@ export default class Editar extends Component {
                             <th scope="col">Nombre del Producto</th>
                             <th scope="col">Descripcion</th>
                             <th scope="col">Costo</th>
-                            <th scope="col">Stock</th>
+                            <th scope="col">Stock</th> 
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Imagen</th>
                             <th scope="col">Opciones</th>
-                            
+
 
 
                         </tr>
@@ -72,7 +88,10 @@ export default class Editar extends Component {
                             <td>Rico taco de Frijol</td>
                             <td>$20</td>
                             <td>10</td>
-                            <td><button type="button" class="btn btn-primary m-1">Editar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
+                            <td>Caldo</td>
+                            <td>Imagen Insertada</td>
+                            <td><button  className="btn btn-primary m-1" onClick={this.onClickButton}>Editar</button>
+                            <button type="button" class="btn btn-danger">Eliminar</button></td>
 
 
                         </tr>
@@ -80,7 +99,27 @@ export default class Editar extends Component {
                     </tbody>
 
                 </table>
+
+                <Modal show={this.state.showModal} onClick={this.onClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Modal heading</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <EditarModal1/>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={this.onClose}>
+                            Close
+                        </Button>
+                        <Button variant="primary" onClick={this.handleClose}>
+                            Save Changes
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+
+
             </div>
+
         )
     }
 }
