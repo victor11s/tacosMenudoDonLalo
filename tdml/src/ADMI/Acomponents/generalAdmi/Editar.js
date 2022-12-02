@@ -7,6 +7,8 @@ import { Modal, Button } from 'react-bootstrap';
 
 export default class Editar extends Component {
 
+    /*insert*/
+
     ligaAxios = 'http://localhost:3001/api/';
 
     /* Insertar datos que se piden de la BD */

@@ -89,7 +89,7 @@ export default class EditarModal1 extends Component {
                     <Form.Group className="mb-3" controlId="formText">
                         <Form.Label>Imagen</Form.Label>
                         <Form.Control name="imagen"  placeholder="Introduce la imagen"
-                            defaultValue={"..."} onChange={this.handleChange} required />
+                            defaultValue={"..."} onChange={this.handleChange}  />
                     </Form.Group>
                     <Button variant="success" type="submit">
                         Confirmar Cambio
