@@ -65,4 +65,12 @@ router.put('/update', function (req, response) {
     }
 });
 
+
+router.get('/getTablaEditar', function (req, res) {
+    const sqlQuery = "SELECT * FROM articulo";
+    db.query(sqlQuery, (error, result) => {
+        res.send(result);
+    });
+});
+
 module.exports = router;
