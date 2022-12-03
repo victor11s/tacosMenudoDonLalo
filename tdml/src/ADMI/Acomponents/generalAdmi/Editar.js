@@ -15,6 +15,11 @@ export default function Editar() {
 
     const [ArticulosLista, setArticulosLista] = useState([]);
 
+    const deleteArticle = async (id_articulo) => {
+        await Axios.delete(ligaAxios + 'delete/:' + id_articulo)
+    }
+
+
 
 
     useEffect(() => {
@@ -59,7 +64,7 @@ export default function Editar() {
                                 <td>{elemento.tipo}</td>
                                 <td>{elemento.imagen}</td>
                                 <td><button type="button" className="btn btn-primary m-1" onClick={handleShow}>Editar</button>
-                                    <button type="button" class="btn btn-danger">Eliminar</button></td>
+                                    <button type="button" class="btn btn-danger" onClick={deleteArticle}>Eliminar</button></td>
                             </tr>
                         );
                         })}

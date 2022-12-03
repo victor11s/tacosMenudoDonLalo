@@ -91,22 +91,22 @@ export default class EditarModal1 extends Component {
                 <Form.Group className="mb-3" controlId="formEmail">
                     <Form.Label>Nombre del Producto</Form.Label>
                     <Form.Control name="nombre" type="text" placeholder="Introduce tu Producto"
-                        defaultValue={"Taco de "} onChange={this.handleChange} required />
+                        defaultValue={this.props.nombre} onChange={this.handleChange} required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formNumber">
                     <Form.Label>Descripcion</Form.Label>
                     <Form.Control name="descripcion" type="text" placeholder="Introduce la decripcion"
-                        defaultValue={"Rico taco de"} onChange={this.handleChange} required />
+                        defaultValue={this.props.descripción} onChange={this.handleChange} required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formText">
                     <Form.Label>Costo</Form.Label>
                     <Form.Control name="precio_unitario" type="number" placeholder="Introduce el costo"
-                        defaultValue={"$"} onChange={this.handleChange} required />
+                        defaultValue={this.props.precio_unitario} onChange={this.handleChange} required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formText">
                     <Form.Label>Stock</Form.Label>
                     <Form.Control name="stock" type="number" placeholder="Introduce el Stock"
-                        defaultValue={"..."} onChange={this.handleChange} required />
+                        defaultValue={this.props.stock} onChange={this.handleChange} required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formText">
@@ -121,7 +121,7 @@ export default class EditarModal1 extends Component {
                 <Form.Group className="mb-3" controlId="formText">
                     <Form.Label>Imagen</Form.Label>
                     <Form.Control name="imagen" id='imagen' placeholder="Introduce la imagen"
-                        defaultValue={""} onChange={this.handleChange} />
+                        defaultValue={this.props.imagen} onChange={this.handleChange} />
                 </Form.Group>
                 <Button variant="success" type="submit">
                     Confirmar Cambio

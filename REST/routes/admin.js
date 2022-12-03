@@ -59,7 +59,7 @@ router.put('/update', function (req, response) {
         });
 
     } else {
-        response.send('Introduzca correctamente los datos');
+        response.send(false);
         //console.log([nombre, tipo, precio_unitario, imagen]);
         response.end();
     }
@@ -73,4 +73,17 @@ router.get('/getTablaEditar', function (req, res) {
     });
 });
 
+
+router.delete('/delete/:id_articulo ' , function (req, response) {
+    const id_articulo = req.body.id_articulo;
+    const sqlQuery = "DELETE FROM articulo WHERE id_articulo = (?);";
+    db.query(sqlQuery, (error, result) => {
+        if (error) throw error;
+        if (result) {
+            console.log('error');
+        } else {
+            console.log('success');
+        }
+    });
+});
 module.exports = router;
