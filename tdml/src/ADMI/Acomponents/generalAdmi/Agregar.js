@@ -33,7 +33,7 @@ export default class Agregar extends Component {
         if (this.state.form.tipo == "Caldos") {
 
             document.getElementById("imagen").disabled = true;
-            document.getElementById("imagen").value = './modal/img/menudo.jpg';
+            document.getElementById("imagen").value = '/modal/img/menudo.jpg';
             this.setState({
                 form:
                 {
@@ -45,7 +45,7 @@ export default class Agregar extends Component {
         }
         else if (this.state.form.tipo == "Tacos") {
             document.getElementById("imagen").disabled = true;
-            document.getElementById("imagen").value = './modal/img/tacos-2.jpg';
+            document.getElementById("imagen").value = '/modal/img/tacos-2.jpg';
             this.setState({
                 form: {
                     ...this.state.form,
