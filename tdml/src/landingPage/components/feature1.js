@@ -16,7 +16,7 @@ export default function Feature1() {
 
             <Row className='p-1 '>
                     <Button href="/catalogo" size="lg" className='ColorBoton'>
-                        ORDENA YA!!!
+                        ORDENA YA!
                     </Button>
             </Row>
             <Row className="p-1">
