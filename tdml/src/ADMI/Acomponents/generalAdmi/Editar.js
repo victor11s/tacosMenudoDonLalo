@@ -15,11 +15,20 @@ export default function Editar() {
 
     const [ArticulosLista, setArticulosLista] = useState([]);
 
-    const deleteArticle = async (id_articulo) => {
-        await Axios.delete(ligaAxios + 'delete/:' + id_articulo)
+    
+
+    const deleteArticle =  async (event) => {
+
+        /*Longitud de ArticuloLista*/
+        let longitudOriginal = ArticulosLista.length;
+
+        console.log("soy el id",event.target.id);
+        event.preventDefault();
+        await Axios.post(ligaAxios + "delete",{"id" :event.target.id})
+        
+        
+
     }
-
-
 
 
     useEffect(() => {
@@ -56,7 +65,7 @@ export default function Editar() {
                 <tbody>
                     {ArticulosLista.map(elemento => {
                         return (
-                            <tr key={elemento.id_articulo + '-tr'}>
+                            <tr key={elemento.id_articulo + '-tr'} id={elemento.id_articulo + '-tr'}>
                                 <th scope="row">{elemento.nombre}</th>
                                 <td>{elemento.descripción}</td>
                                 <td>{elemento.precio_unitario}</td>
@@ -64,7 +73,7 @@ export default function Editar() {
                                 <td>{elemento.tipo}</td>
                                 <td>{elemento.imagen}</td>
                                 <td><button type="button" className="btn btn-primary m-1" onClick={handleShow}>Editar</button>
-                                    <button type="button" class="btn btn-danger" onClick={deleteArticle}>Eliminar</button></td>
+                                    <button type="button" class="btn btn-danger" id={elemento.id_articulo} onClick={deleteArticle}>Eliminar</button></td>
                             </tr>
                         );
                         })}

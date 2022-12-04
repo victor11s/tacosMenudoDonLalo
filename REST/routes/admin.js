@@ -74,16 +74,12 @@ router.get('/getTablaEditar', function (req, res) {
 });
 
 
-router.delete('/delete/:id_articulo ' , function (req, response) {
-    const id_articulo = req.body.id_articulo;
+router.post('/delete' , function (req, response) {
+    const id_articulo = req.body.id;
     const sqlQuery = "DELETE FROM articulo WHERE id_articulo = (?);";
-    db.query(sqlQuery, (error, result) => {
-        if (error) throw error;
-        if (result) {
-            console.log('error');
-        } else {
-            console.log('success');
-        }
+    db.query(sqlQuery,[id_articulo], (error, result) => {
+        
     });
 });
+
 module.exports = router;
