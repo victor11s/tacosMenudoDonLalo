@@ -5,6 +5,8 @@ import { Button } from 'react-bootstrap';
 
 import Carrito from '../../catalago/Carrito';
 
+import MainCarrito from '../../Carrito/MainCarrito';
+
 function logout(){
     localStorage.removeItem('logged');
     localStorage.removeItem('nombre_usuario');

@@ -52,7 +52,7 @@ export default class InformacionEditar extends Component {
 
     render() {
         return (
-            <Form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit} className='mb-3'>
                     
                     <Form.Group className="mb-3" controlId="formEmail">
                         <Form.Label>Nombre y Apellido</Form.Label>
@@ -63,11 +63,6 @@ export default class InformacionEditar extends Component {
                         <Form.Label>Calle</Form.Label>
                         <Form.Control name="calle" type="text" placeholder="Introduce tu Calle"
                             defaultValue={""} onChange={this.handleChange} required />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formText">
-                        <Form.Label>Numero de Calle</Form.Label>
-                        <Form.Control name="costo" type="number" placeholder="Introduce tu Numero de Calle"
-                            defaultValue={""} onChange={this.handleChange} required/>
                     </Form.Group>
                     <Button variant="success" type="submit">
                         Cambiar

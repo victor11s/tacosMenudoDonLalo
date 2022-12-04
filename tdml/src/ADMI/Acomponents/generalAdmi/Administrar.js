@@ -6,15 +6,20 @@ import DefaultNavbar from '../../../globalComponents/defaultNavbar'
 
 import Editar from './Editar'
 import Agregar from './Agregar'
-import AgregarCaldo from './AgregarCaldo'
-import AgregarBebida from './AgregarBebida'
+
+
+
+
 
 export default function Administrar() {
+
+    
+
     return (
         <div>
             <DefaultNavbar />
 
-            <Container>
+            <Container >
 
                 <Row className="d-flex justify-content-center m-5">
                     <Col className='d-flex justify-content-center my-auto'>
@@ -22,16 +27,17 @@ export default function Administrar() {
                     </Col>
                 </Row>
 
-                <Row className="d-flex justify-content-center m-5">
+                <Row className="d-flex justify-content-center m-5 FBBN">
                     <Tabs
                         defaultActiveKey="profile"
                         id="justify-tab-example"
                         className="mb-3"
                         justify
                     >
-                        <Tab eventKey="taco" title="Agregar">
+                        <Tab eventKey="taco" title="Agregar" >
                             <Agregar />
                         </Tab>
+
                         <Tab eventKey="editar" title="Editar">
                             <Editar/>
                         </Tab>

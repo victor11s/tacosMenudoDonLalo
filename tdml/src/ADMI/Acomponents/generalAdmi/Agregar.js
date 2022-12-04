@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
 import { Button, Form, Modal } from 'react-bootstrap';
-import tacos2 from './modal/img/tacos-2.jpg';
-import menudo from './modal/img/menudo.jpg';
+
 
 export default class Agregar extends Component {
 
@@ -34,15 +33,29 @@ export default class Agregar extends Component {
         if (this.state.form.tipo == "Caldos") {
 
             document.getElementById("imagen").disabled = true;
-            document.getElementById("imagen").value = {menudo};
+            document.getElementById("imagen").value = '/modal/img/menudo.jpg';
+            this.setState({
+                form:
+                {
+                    ...this.state.form,
+                    "imagen": './modal/img/menudo.jpg'
+                }
+            })
+
         }
         else if (this.state.form.tipo == "Tacos") {
             document.getElementById("imagen").disabled = true;
-            document.getElementById("imagen").value = {tacos2};
+            document.getElementById("imagen").value = '/modal/img/tacos-2.jpg';
+            this.setState({
+                form: {
+                    ...this.state.form,
+                    "imagen": './modal/img/tacos-2.jpg'
+                }
+            })
         }
 
         else {
-            document.getElementById("imagen").disabled = false;
+            document.getElementById("imagen").disabled = true;
         }
     }
 
@@ -61,7 +74,7 @@ export default class Agregar extends Component {
                 imagen: this.state.form.imagen
             }).then(async res => {
                 let success = res.data;
-                //console.log(authorization);
+                console.log(success);
                 if (success) {
                     alert("Se agrego correctamente");
                 } else {
@@ -74,17 +87,17 @@ export default class Agregar extends Component {
 
     render() {
         return (
-            <Form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit} className='mb-3'>
 
                 <Form.Group className="mb-3" controlId="formEmail">
                     <Form.Label>Nombre del Producto</Form.Label>
                     <Form.Control name="nombre" type="text" placeholder="Introduce tu Producto"
-                        defaultValue={"Taco de "} onChange={this.handleChange} required />
+                        defaultValue={"Taco/Caldo de "} onChange={this.handleChange} required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formNumber">
                     <Form.Label>Descripcion</Form.Label>
                     <Form.Control name="descripcion" type="text" placeholder="Introduce la decripcion"
-                        defaultValue={"Rico taco de"} onChange={this.handleChange} required />
+                        defaultValue={"Rico taco/caldo de"} onChange={this.handleChange} required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formText">
                     <Form.Label>Costo</Form.Label>
@@ -109,7 +122,7 @@ export default class Agregar extends Component {
                 <Form.Group className="mb-3" controlId="formText">
                     <Form.Label>Imagen</Form.Label>
                     <Form.Control name="imagen" id='imagen' placeholder="Introduce la imagen"
-                        defaultValue={""} onChange={this.handleChange} />
+                        defaultValue={""} onChange={this.handleChange} disabled/>
                 </Form.Group>
 
                 <Button variant="success" type="submit">
