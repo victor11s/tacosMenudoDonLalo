@@ -64,7 +64,8 @@ export default function FoodCards() {
                                 imagen = {tacos}
                                 nombre = {platillo.nombre}
                                 precio = {platillo.precio_unitario}
-                                descripcion = {platillo.descripción}
+                                descripción = {platillo.descripción}
+                                tipo = {platillo.tipo}
                             />
                         </Col>
                     );
@@ -77,7 +78,8 @@ export default function FoodCards() {
                                 imagen = {menudo}
                                 nombre = {caldo.nombre}
                                 precio = {caldo.precio_unitario}
-                                description = {caldo.descripción}
+                                descripción = {caldo.descripción}
+                                tipo = {caldo.tipo}
                             />
                         </Col>
                     );

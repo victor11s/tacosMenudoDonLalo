@@ -9,6 +9,17 @@ import NumericInput from 'react-numeric-input';
 
 
 export default function FoodCard(props) {
+
+    /* Funcion para deshabilitar el select*/
+    function disableSelect() {
+        if (props.tipo === 'Caldos') {
+            document.getElementById("select").disabled = true;
+        }
+        
+    }
+
+
+
     return (
         <div>
             <Card style={{ width: '15rem'}} className='square rounded-5 border-secondary mb-4'>
@@ -25,7 +36,7 @@ export default function FoodCard(props) {
                 <Card.Body>
                     <Row className='p-1'>
                         <Col>
-                            <Form.Select name='tortilla' aria-label="Default select example">
+                            <Form.Select name='tortilla' aria-label="Default select example" id='select' onLoad={disableSelect} >
                                 <option>Selecciona tu tortilla</option>
                                 <option value="1">Maiz</option>
                                 <option value="2">Harina</option>
