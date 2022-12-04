@@ -38,8 +38,8 @@ export default function FoodCard(props) {
                         <Col>
                             <Form.Select name='tortilla' aria-label="Default select example" id='select' onLoad={disableSelect} >
                                 <option>Selecciona tu tortilla</option>
-                                <option value="1">Maiz</option>
-                                <option value="2">Harina</option>
+                                <option value="Maiz">Maiz</option>
+                                <option value="Harina">Harina</option>
                             </Form.Select>
                         </Col>
                     </Row>
