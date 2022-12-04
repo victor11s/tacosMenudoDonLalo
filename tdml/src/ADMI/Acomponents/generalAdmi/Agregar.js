@@ -54,82 +54,92 @@ export default class Agregar extends Component {
             })
         }
 
-        else {
+        else if (this.state.form.tipo == "Bebidas") {
+
             document.getElementById("imagen").disabled = true;
+            document.getElementById("imagen").value = '/modal/img/aguas.jpeg';
+            this.setState({
+                form: {
+                    ...this.state.form,
+                    "imagen": './modal/img/aguas.jpeg'
+
+                }
+            })
+
         }
     }
 
-    /*if select is a taco let default image*/
+        /*if select is a taco let default image*/
 
 
-    handleSubmit = async e => {
-        e.preventDefault();
-        await Axios.post((this.ligaAxios + 'insert'),
-            {
-                nombre: this.state.form.nombre,
-                descripcion: this.state.form.descripcion,
-                stock: this.state.form.stock,
-                tipo: this.state.form.tipo,
-                precio_unitario: this.state.form.precio_unitario,
-                imagen: this.state.form.imagen
-            }).then(async res => {
-                let success = res.data;
-                console.log(success);
-                if (success) {
-                    alert("Se agrego correctamente");
-                } else {
-                    alert("No se agrego correctamente");
-                }
+        handleSubmit = async e => {
+            e.preventDefault();
+            await Axios.post((this.ligaAxios + 'insert'),
+                {
+                    nombre: this.state.form.nombre,
+                    descripcion: this.state.form.descripcion,
+                    stock: this.state.form.stock,
+                    tipo: this.state.form.tipo,
+                    precio_unitario: this.state.form.precio_unitario,
+                    imagen: this.state.form.imagen
+                }).then(async res => {
+                    let success = res.data;
+                    console.log(success);
+                    if (success) {
+                        alert("Se agrego correctamente");
+                    } else {
+                        alert("No se agrego correctamente");
+                    }
 
-            })
+                })
+        }
+
+
+        render() {
+            return (
+                <Form onSubmit={this.handleSubmit} className='mb-3'>
+
+                    <Form.Group className="mb-3" controlId="formEmail">
+                        <Form.Label>Nombre del Producto</Form.Label>
+                        <Form.Control name="nombre" type="text" placeholder="Introduce tu Producto"
+                            defaultValue={"Taco/Caldo de "} onChange={this.handleChange} required />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formNumber">
+                        <Form.Label>Descripcion</Form.Label>
+                        <Form.Control name="descripcion" type="text" placeholder="Introduce la decripcion"
+                            defaultValue={"Rico taco/caldo de"} onChange={this.handleChange} required />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formText">
+                        <Form.Label>Costo</Form.Label>
+                        <Form.Control name="precio_unitario" type="number" placeholder="Introduce el costo"
+                            defaultValue={"$"} onChange={this.handleChange} required />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formText">
+                        <Form.Label>Stock</Form.Label>
+                        <Form.Control name="stock" type="number" placeholder="Introduce el Stock"
+                            defaultValue={"..."} onChange={this.handleChange} required />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formText">
+                        <Form.Label>Tipo</Form.Label>
+                        <Form.Select name="tipo" aria-label="Default select example" onChange={this.handleChange} required>
+                            <option value="Bebidas">Bebidas</option>
+                            <option value="Tacos">Tacos</option>
+                            <option value="Caldos">Caldos</option>
+                        </Form.Select>
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formText">
+                        <Form.Label>Imagen</Form.Label>
+                        <Form.Control name="imagen" id='imagen' placeholder="Introduce la imagen"
+                            defaultValue={""} onChange={this.handleChange} disabled />
+                    </Form.Group>
+
+                    <Button variant="success" type="submit">
+                        Agregar
+                    </Button>
+
+                </Form>
+            )
+        }
     }
-
-
-    render() {
-        return (
-            <Form onSubmit={this.handleSubmit} className='mb-3'>
-
-                <Form.Group className="mb-3" controlId="formEmail">
-                    <Form.Label>Nombre del Producto</Form.Label>
-                    <Form.Control name="nombre" type="text" placeholder="Introduce tu Producto"
-                        defaultValue={"Taco/Caldo de "} onChange={this.handleChange} required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formNumber">
-                    <Form.Label>Descripcion</Form.Label>
-                    <Form.Control name="descripcion" type="text" placeholder="Introduce la decripcion"
-                        defaultValue={"Rico taco/caldo de"} onChange={this.handleChange} required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formText">
-                    <Form.Label>Costo</Form.Label>
-                    <Form.Control name="precio_unitario" type="number" placeholder="Introduce el costo"
-                        defaultValue={"$"} onChange={this.handleChange} required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formText">
-                    <Form.Label>Stock</Form.Label>
-                    <Form.Control name="stock" type="number" placeholder="Introduce el Stock"
-                        defaultValue={"..."} onChange={this.handleChange} required />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formText">
-                    <Form.Label>Tipo</Form.Label>
-                    <Form.Select name="tipo" aria-label="Default select example" onChange={this.handleChange} required>
-                        <option value="Bebidas">Bebidas</option>
-                        <option value="Tacos">Tacos</option>
-                        <option value="Caldos">Caldos</option>
-                    </Form.Select>
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formText">
-                    <Form.Label>Imagen</Form.Label>
-                    <Form.Control name="imagen" id='imagen' placeholder="Introduce la imagen"
-                        defaultValue={""} onChange={this.handleChange} disabled/>
-                </Form.Group>
-
-                <Button variant="success" type="submit">
-                    Agregar
-                </Button>
-
-            </Form>
-        )
-    }
-}

@@ -20,11 +20,23 @@ export default function Editar() {
     const deleteArticle =  async (event) => {
 
         /*Longitud de ArticuloLista*/
-        let longitudOriginal = ArticulosLista.length;
+        
 
         console.log("soy el id",event.target.id);
         event.preventDefault();
         await Axios.post(ligaAxios + "delete",{"id" :event.target.id})
+        .then(response => {
+        
+        console.log(response);
+        if (response) {
+            alert("Articulo eliminado");
+            window.location.reload();
+        } else {
+            alert("Error al eliminar");
+        }
+    })
+        
+
         
         
 

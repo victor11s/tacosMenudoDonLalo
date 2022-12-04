@@ -113,7 +113,12 @@ router.post('/delete' , function (req, response) {
     const id_articulo = req.body.id;
     const sqlQuery = "DELETE FROM articulo WHERE id_articulo = (?);";
     db.query(sqlQuery,[id_articulo], (error, result) => {
-        
+        if (error) throw error;
+        if (result.affectedRows > 0) {
+            response.send(true);
+        } else {
+            response.send(false);
+        }
     });
 });
 
