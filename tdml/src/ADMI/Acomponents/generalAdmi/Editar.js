@@ -24,7 +24,8 @@ export default function Editar() {
 
         console.log("soy el id",event.target.id);
         event.preventDefault();
-        await Axios.post(ligaAxios + "delete",{"id" :event.target.id})
+        await Axios.post(ligaAxios + "delete",{"id" :event.target.id});
+        document.getElementById(event.target.id+ + '-tr').remove();
         
         
 
