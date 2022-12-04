@@ -7,6 +7,7 @@ import DefaultNavbar from '../../../globalComponents/defaultNavbar'
 import Editar from './Editar'
 import Agregar from './Agregar'
 
+import Footer from '../../../landingPage/components/footer'
 
 
 
@@ -19,7 +20,7 @@ export default function Administrar() {
         <div>
             <DefaultNavbar />
 
-            <Container >
+            <Container className='mb-3'>
 
                 <Row className="d-flex justify-content-center m-5">
                     <Col className='d-flex justify-content-center my-auto'>
@@ -46,6 +47,8 @@ export default function Administrar() {
                 </Row>
 
             </Container>
+
+            
 
 
 

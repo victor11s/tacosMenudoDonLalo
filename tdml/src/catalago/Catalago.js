@@ -5,6 +5,8 @@ import FoodCards from './componentsC/FoodCards';
 import DrinkCards from './componentsC/DrinkCards';
 import Seleccion from './componentsC/Seleccion';
 
+import Footer from '../landingPage/components/footer';
+
 
 
 
@@ -15,7 +17,7 @@ export default class Catalogo extends Component {
         return (
             <div>
                 <DefaultNavbar />
-                <Container className="BordeNegro2">
+                <Container className="BordeNegro2 mb-3">
                     <Row>
                         <Col sm={3}>
                             <div className="sticky">
@@ -42,7 +44,11 @@ export default class Catalogo extends Component {
                             </Container>
                         </Col>
                     </Row>
+
+                    
                 </Container>
+
+                <Footer></Footer>
             </div>
         );
     }
