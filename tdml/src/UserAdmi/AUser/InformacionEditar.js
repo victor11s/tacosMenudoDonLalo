@@ -52,7 +52,7 @@ export default class InformacionEditar extends Component {
 
     render() {
         return (
-            <Form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit} className='mb-3'>
                     
                     <Form.Group className="mb-3" controlId="formEmail">
                         <Form.Label>Nombre y Apellido</Form.Label>

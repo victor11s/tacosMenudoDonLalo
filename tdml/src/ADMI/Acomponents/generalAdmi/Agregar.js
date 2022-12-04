@@ -87,17 +87,17 @@ export default class Agregar extends Component {
 
     render() {
         return (
-            <Form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit} className='mb-3'>
 
                 <Form.Group className="mb-3" controlId="formEmail">
                     <Form.Label>Nombre del Producto</Form.Label>
                     <Form.Control name="nombre" type="text" placeholder="Introduce tu Producto"
-                        defaultValue={"Taco de "} onChange={this.handleChange} required />
+                        defaultValue={"Taco/Caldo de "} onChange={this.handleChange} required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formNumber">
                     <Form.Label>Descripcion</Form.Label>
                     <Form.Control name="descripcion" type="text" placeholder="Introduce la decripcion"
-                        defaultValue={"Rico taco de"} onChange={this.handleChange} required />
+                        defaultValue={"Rico taco/caldo de"} onChange={this.handleChange} required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formText">
                     <Form.Label>Costo</Form.Label>

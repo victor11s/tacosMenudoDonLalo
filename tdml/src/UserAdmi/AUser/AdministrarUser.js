@@ -18,7 +18,7 @@ export default function AdministrarUser() {
                     </Col>
                 </Row>
 
-                <Row className="d-flex justify-content-center m-5">
+                <Row className="d-flex justify-content-center m-5 FBBN">
                     <Tabs
                         defaultActiveKey="profile"
                         id="justify-tab-example"

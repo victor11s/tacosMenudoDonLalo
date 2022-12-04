@@ -16,7 +16,7 @@ export default function FoodCard(props) {
                 <Card.Body>
                     <Card.Title>{props.nombre}</Card.Title>
                     <Card.Text>
-                        Deliciosa carne de Res
+                        {props.descripción}
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush text-end square border border-2">
@@ -25,7 +25,7 @@ export default function FoodCard(props) {
                 <Card.Body>
                     <Row className='p-1'>
                         <Col>
-                            <Form.Select aria-label="Default select example">
+                            <Form.Select name='tortilla' aria-label="Default select example">
                                 <option>Selecciona tu tortilla</option>
                                 <option value="1">Maiz</option>
                                 <option value="2">Harina</option>
