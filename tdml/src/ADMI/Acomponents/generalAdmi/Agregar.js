@@ -55,7 +55,7 @@ export default class Agregar extends Component {
         }
 
         else {
-            document.getElementById("imagen").disabled = false;
+            document.getElementById("imagen").disabled = true;
         }
     }
 
@@ -122,7 +122,7 @@ export default class Agregar extends Component {
                 <Form.Group className="mb-3" controlId="formText">
                     <Form.Label>Imagen</Form.Label>
                     <Form.Control name="imagen" id='imagen' placeholder="Introduce la imagen"
-                        defaultValue={""} onChange={this.handleChange} />
+                        defaultValue={""} onChange={this.handleChange} disabled/>
                 </Form.Group>
 
                 <Button variant="success" type="submit">

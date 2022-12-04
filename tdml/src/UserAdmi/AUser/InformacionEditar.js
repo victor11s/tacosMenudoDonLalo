@@ -64,11 +64,6 @@ export default class InformacionEditar extends Component {
                         <Form.Control name="calle" type="text" placeholder="Introduce tu Calle"
                             defaultValue={""} onChange={this.handleChange} required />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formText">
-                        <Form.Label>Numero de Calle</Form.Label>
-                        <Form.Control name="costo" type="number" placeholder="Introduce tu Numero de Calle"
-                            defaultValue={""} onChange={this.handleChange} required/>
-                    </Form.Group>
                     <Button variant="success" type="submit">
                         Cambiar
                     </Button>

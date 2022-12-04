@@ -57,19 +57,16 @@ export default class InformacionPersonal extends Component {
                     
                     <Form.Group className="mb-3" controlId="formEmail">
                         <Form.Label>Nombre y Apellido</Form.Label>
-                        <Form.Control name="nombre_usuario" type="text" placeholder="Introduce tu Nombre"
+                        <Form.Control name="nombre_usuario" type="text" placeholder="Introduce tu Nombre en Editar Informacion"
                             defaultValue={""} onChange={this.handleChange} disabled />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formNumber">
-                        <Form.Label>Calle</Form.Label>
-                        <Form.Control name="calle" type="text" placeholder="Introduce tu Calle"
+                        <Form.Label>Dirección</Form.Label>
+                        <Form.Control name="calle" type="text" placeholder="Introduce tu Calle en Editar Informacion"
                             defaultValue={""} onChange={this.handleChange} disabled />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formText">
-                        <Form.Label>Numero de Calle</Form.Label>
-                        <Form.Control name="costo" type="number" placeholder="Introduce tu Numero de Calle"
-                            defaultValue={""} onChange={this.handleChange} disabled/>
-                    </Form.Group>
+                    
+
                   
 
             </Form>
