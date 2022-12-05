@@ -98,6 +98,26 @@
   border: 1px solid black;
   /*Espacio inferior*/
   margin-bottom: 10px;
+
+}
+
+.NavB
+{
+  color: black;
+  /*No underline*/
+  text-decoration: none;
+  /*Add space to the left*/
+  padding-left: 10px;
+}
+
+.LNC
+{
+  font-size: calc(15px);
+}
+
+.ST
+{
+  font-size: calc(14px);
 }
 
 /* Para menus persistentes: */

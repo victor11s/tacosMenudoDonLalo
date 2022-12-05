@@ -3,25 +3,25 @@ import React from 'react'
 
 import { Card, ListGroup, Row, Col, Button } from 'react-bootstrap'
 
-import coca from './images/cocaSF.png'
+
 
 import NumericInput from 'react-numeric-input';
 
 
-export default function DrinkCard() {
+export default function DrinkCard(props) {
     return (
         <div>
 
             <Card style={{ width: '15rem' }} className='square rounded-5 border-secondary mb-4'>
-                <img src={coca} />
+                <img src={props.imagen} />
                 <Card.Body>
-                    <Card.Title>Coca Cola 355ml</Card.Title>
+                    <Card.Title>{props.nombre}</Card.Title>
                     <Card.Text>
-                        Deliciosa bebida Coca Cola
+                        {props.descripción}
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush text-end square border border-2">
-                    <ListGroup.Item >Precio: <strong>$18</strong></ListGroup.Item>
+                    <ListGroup.Item >Precio: <strong>${props.precio}</strong></ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
                     
