@@ -30,11 +30,10 @@ export default function Administrar() {
 
                 <Row className="d-flex justify-content-center m-5 FBBN">
                     <Tabs
-                        defaultActiveKey="profile"
+                        defaultActiveKey="taco"
                         id="justify-tab-example"
                         className="mb-3"
                         justify
-                        activeKey="taco"
                     >
                         <Tab eventKey="taco"  title="Agregar" >
                             <Agregar />

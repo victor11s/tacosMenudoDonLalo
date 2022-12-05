@@ -1,13 +1,36 @@
-import React from 'react'
-import InformacionPersonal from './InformacionPersonal'
-import InformacionEditar from './InformacionEditar'
+import React, { useEffect } from 'react';
+import InformacionPersonal from './InformacionPersonal';
+import InformacionEditar from './InformacionEditar';
+import Axios from 'axios';
 
-import { Card, ListGroup, Row, Col, Button, Form, Nav, Container, Tab, Tabs } from 'react-bootstrap'
+import { Row, Col, Container, Tab, Tabs } from 'react-bootstrap'
 import DefaultNavbar from '../../globalComponents/defaultNavbar'
 
+let ligaAxios = 'http://localhost:3001/api/';
+
 export default function AdministrarUser() {
-  return (
-    <div>
+    const [user, setUser] = React.useState([])
+
+    useEffect(() => {
+        // Obteniendo usuario de la base de datos 
+        async function getUser() {
+            await Axios.get(ligaAxios + 'getAdmin')
+                .then( async (response) => {
+                    if (response.data[0] !== undefined) { //Condicion que sirve para validar datos de retorno
+                        await setUser(response.data[0]);
+                        //console.log(response.data)
+                    } else {
+                        console.log("Error: No se recibió información del usuario");
+                    }
+                });
+        }
+        getUser();
+
+    }, []);
+    console.log(user) 
+
+    return (
+        <div>
             <DefaultNavbar />
 
             <Container>
@@ -26,13 +49,21 @@ export default function AdministrarUser() {
                         justify
                     >
                         <Tab eventKey="PersonalInfo" title="Informacion Personal">
-                            <InformacionPersonal/>
+                            <InformacionPersonal 
+                                nombre_usuario={user.nombre_usuario}
+                                nombre={user.nombre}
+                                direccion={user.direccion}
+                            />
                         </Tab>
                         <Tab eventKey="EditPersonalInfo" title="Editar Información">
-                            <InformacionEditar/>
+                            <InformacionEditar 
+                                nombre_usuario={user.nombre_usuario}
+                                nombre={user.nombre}
+                                direccion={user.direccion}    
+                            />
                         </Tab>
-                    
-                        
+
+
                     </Tabs>
                 </Row>
 
@@ -42,5 +73,5 @@ export default function AdministrarUser() {
 
 
         </div>
-  )
+    )
 }
