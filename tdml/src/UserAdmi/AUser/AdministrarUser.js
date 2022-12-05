@@ -37,7 +37,7 @@ export default function AdministrarUser() {
 
                 <Row className="d-flex justify-content-center m-5">
                     <Col className='d-flex justify-content-center my-auto'>
-                        <h1>Administra tus Datos</h1>
+                        <h1>Datos Personales</h1>
                     </Col>
                 </Row>
 
@@ -55,15 +55,9 @@ export default function AdministrarUser() {
                                 direccion={user.direccion}
                             />
                         </Tab>
-                        <Tab eventKey="EditPersonalInfo" title="Editar Información">
-                            <InformacionEditar 
-                                nombre_usuario={user.nombre_usuario}
-                                nombre={user.nombre}
-                                direccion={user.direccion}    
-                            />
-                        </Tab>
-
-
+                        
+                    
+                        
                     </Tabs>
                 </Row>
 

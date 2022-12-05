@@ -12,6 +12,7 @@ export default class SigninForm extends Component {
             "nombre_usuario": "",
             "password": "",
             "password_confirm": "",
+            "direccion": "",
         },
         showModal: false
     }
@@ -32,19 +33,14 @@ export default class SigninForm extends Component {
             await Axios.post((this.ligaAxios + 'signin'),
                 {
                     nombre_usuario: this.state.form.nombre_usuario,
-                    password: this.state.form.password
+                    password: this.state.form.password,
+                    direccion: this.state.form.direccion
                 }).then(async res => {
                     let authorization = res.data;
                     //console.log(authorization);
                     if (authorization) {
-                        //alert("Registro de usuario exitoso")
-                        this.handleShow()
-                        //window.open("/login", "_self");
+                        alert("Registro de usuario exitoso")
                     } else {
-                        // this.handleShow();
-                        // let modal = document.getElementById("modal");
-                        // //modal.show = true;
-                        // console.log(modal);
                         alert("El nombre de usuario ya está registrado")
                     }
 
@@ -84,7 +80,7 @@ export default class SigninForm extends Component {
                     </Modal.Header>
                     <Modal.Body>
                         <p>
-                            El registro de usuario ha sido exitoso.<br/> Inicie sesión con su cuenta.
+                            El registro de usuario ha sido exitoso.<br /> Inicie sesión con su cuenta.
                         </p>
                     </Modal.Body>
                     <Modal.Footer>
@@ -99,22 +95,24 @@ export default class SigninForm extends Component {
                     <Form.Group className="mb-3" controlId="formEmail">
                         <Form.Label>Correo electrónico</Form.Label>
                         <Form.Control name="nombre_usuario" type="email" placeholder="Introduce tu email"
-                            defaultValue={"prueba@udem.edu"} onChange={this.handleChange} required />
-                        <Form.Text className="text-muted">
-                            No compartiremos tu correo con nadie más.
-                        </Form.Text>
+                            defaultValue={""} onChange={this.handleChange} required />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formPassword1">
                         <Form.Label>Contraseña</Form.Label>
                         <Form.Control name="password" type="password" placeholder="Contraseña"
-                            defaultValue={666} onChange={this.handleChange} required />
+                            defaultValue={""} onChange={this.handleChange} required />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formPassword2">
                         <Form.Label>Repetir contraseña</Form.Label>
                         <Form.Control name="password_confirm" type="password" placeholder="Repetir contraseña"
-                            defaultValue={666} onChange={this.handleChange} required />
+                            defaultValue={""} onChange={this.handleChange} required />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Form.Group className="mb-3" controlId="formAddress">
+                        <Form.Label>Calle y Número</Form.Label>
+                        <Form.Control name="direccion" type="text" placeholder="Dirección"
+                            defaultValue={""} onChange={this.handleChange} required />
+                    </Form.Group>
+                    <Button variant="primary" type="submit" onClick={this.handleSubmit} >
                         Registrarme
                     </Button>
                 </Form>
