@@ -9,6 +9,13 @@ import CarrritoCards from './CarrritoCards'
 import Paypal from './Paypal'
 
 export default function MainCarrito(props) {
+    //state para el total a pagar
+    const [total, setTotal] = React.useState(0);
+    //Handler para actualizar el total
+    const actualizarTotal = (total) => {
+        setTotal(total);
+        console.log(total);
+    }
     return (
         <div>
             <DefaultNavbar />
@@ -24,20 +31,19 @@ export default function MainCarrito(props) {
 
                 <Container className='FondoBlanco BordeNegro '>
                     <Row className='m-1'>
-                        <CarrritoCards />
+                        <CarrritoCards actualizarTotal={actualizarTotal}/>
                     </Row>
 
 
                     <Row>
                         <Col className='d-flex justify-content-center my-auto mb-2'>
-                            <h1 id={'total-label'}>Total:{props.total}</h1>
+                            <h1 id={'total-label'}>Total:{total}</h1>
                         </Col>
                     </Row>
 
                     <Row>
                         <Col className="d-grid gap-2 mb-3 justify-content-center">
-                            <Paypal/>
-                            
+                            <Paypal total={total}/>
                         </Col>
                     </Row>
 

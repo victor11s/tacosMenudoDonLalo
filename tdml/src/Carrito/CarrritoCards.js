@@ -24,7 +24,6 @@ export default class CarrritoCards extends Component {
   }
   //obtener los items de las cookies y añadirlos a la lista de items
   async componentDidMount() {
-
     await this.obtenerCostoTotal();
   }
   //funcion para obtener las cookies de los items
@@ -56,6 +55,7 @@ export default class CarrritoCards extends Component {
       console.log(this.costoTotal);
       this.editarTotal();
     });
+    this.props.actualizarTotal(this.costoTotal);
   }
   //funcion para editar la etiqueta del total
   editarTotal(){
