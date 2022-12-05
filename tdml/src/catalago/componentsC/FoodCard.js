@@ -42,7 +42,7 @@ export default function FoodCard(props) {
                 <Card.Img src={props.imagen} />
                 <Card.Body>
                     <Card.Title >{props.nombre}</Card.Title>
-                    <Card.Text >
+                    <Card.Text>
                         {props.descripción}
                     </Card.Text>
                 </Card.Body>

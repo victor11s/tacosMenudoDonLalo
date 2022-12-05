@@ -110,7 +110,15 @@
   padding-left: 10px;
 }
 
+.LNC
+{
+  font-size: calc(15px);
+}
 
+.ST
+{
+  font-size: calc(12px);
+}
 
 /* Para menus persistentes: */
 div.sticky {
