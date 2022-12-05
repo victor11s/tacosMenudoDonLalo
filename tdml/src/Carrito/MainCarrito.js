@@ -46,11 +46,18 @@ export default function MainCarrito(props) {
                     </Row>
 
                     <Row>
+                        <Col>
                         {/* Boton para hacer el check out: */}
-                        <Button className='mx-3' variant='danger' disabled={estadoBoton}>
-                            <NavLink href={`/checkout/${nombre_usuario}/${total}/`}>Proceder pago</NavLink> 
+                        <div className="d-grid gap-2">
+                        <Button href={`/checkout/${nombre_usuario}/${total}/`} className='mb-3' variant='danger' disabled={estadoBoton}>
+                            Proceder pago
 
                         </Button>
+
+                        </div>
+                        
+                        </Col>
+                        
                     </Row>
 
 

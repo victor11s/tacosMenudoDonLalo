@@ -10,11 +10,11 @@ const Paypal = (props) => {
   let { nombre_usuario, amount } = useParams();
   return (
     <Container >
-      <Row></Row>
-      <Row>
-        <Col md={1}></Col>
-        <Col md={10} className="justify-content-center">
-        <h1>Pagar ${amount}</h1>
+      
+      <Row className='d-flex justify-content-center m-5'>
+        <Col sm={1}></Col>
+        <Col sm={10} className="text-center">
+        <h1 className='text-center'>Pagar ${amount}</h1>
           <PayPalCheckout
           clientId='AeIKI84FQ7jy_GvjZNXetrwL-PRIqLuJKFt-aI3jKqXvkKj2fJult-2RVtf03GN_Co4trcItzLvQvsx7'
           id={'paypal-component'}
@@ -34,7 +34,7 @@ const Paypal = (props) => {
             console.log(error)
           }}
         /></Col>
-        <Col md={1}></Col>
+        <Col sm={1}></Col>
 
       </Row>
     </Container>
