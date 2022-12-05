@@ -34,8 +34,9 @@ export default function Administrar() {
                         id="justify-tab-example"
                         className="mb-3"
                         justify
+                        activeKey="taco"
                     >
-                        <Tab eventKey="taco" title="Agregar" >
+                        <Tab eventKey="taco"  title="Agregar" >
                             <Agregar />
                         </Tab>
 
