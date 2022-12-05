@@ -44,7 +44,7 @@ export default function MainCarrito(props) {
 
                     <Row>
                         <Col className="d-grid gap-2 mb-3 justify-content-center">
-                            <Paypal total={total}/>
+                            <Paypal  total={total}/>
                         </Col>
                     </Row>
 

@@ -26,6 +26,7 @@ export default class CarrritoCards extends Component {
   }
   //obtener los items de las cookies y añadirlos a la lista de items
   async componentDidMount() {
+    await this.obtenerCookies();
     await this.obtenerCostoTotal();
   }
   //funcion para obtener las cookies de los items
@@ -45,15 +46,10 @@ export default class CarrritoCards extends Component {
 
   // constante funcion para iterar en la lista de items y obtener el costo total
   obtenerCostoTotal = async () => {
-    await this.obtenerCookies();
-    console.log(this.state.items.listaItems);
     this.costoTotal=0;
-    this.state.items.listaItems.forEach((item) => {
-      //recortar el nombre del item
-      item = "{" + item.split('{')[1];
-      //convertir el string en un objeto JSON
-      const itemJSON = JSON.parse(item);
-      this.costoTotal += itemJSON.precio * itemJSON.cantidad;
+    console.log(this.state.items.listaJSONItems)
+    this.state.items.listaJSONItems.forEach((item) => {
+      this.costoTotal += item.precio * item.cantidad;
       console.log(this.costoTotal);
       this.editarTotal();
     });
@@ -61,9 +57,18 @@ export default class CarrritoCards extends Component {
     //cambiar el atributo total del objeto con id paypal
     //document.getElementById('paypal-component').setAttribute('amount', this.costoTotal);
   }
+  //Filtra los items que estan en el listaJSONItems y cambia el atributo cantidad
+  actualizarJSONListaItems = async (id, cantidad) => {
+    await this.state.items.listaJSONItems.filter((item) => {
+      if (item.id_articulo == id) {
+        item.cantidad = cantidad;
+      }
+      //console.log(item);
+    });
+  }
   //funcion para editar la etiqueta del total
   editarTotal(){
-    document.getElementById('total-label').textContent = "Total: "+this.costoTotal;
+    document.getElementById('total-label').textContent = "Total: $"+this.costoTotal;
   }
 
   contenidoCarrito;
@@ -73,12 +78,14 @@ export default class CarrritoCards extends Component {
     if(this.state.items.listaItems[0]==''){
       this.contenidoCarrito= (<h1>No hay items en el carrito</h1>)
     }else{
+      this.state.items.listaJSONItems = [];
       this.contenidoCarrito = this.state.items.listaItems.map((item) => {
       //recortar el nombre del item
       item = "{" + item.split('{')[1];
       //convertir el string en un objeto JSON
       const itemJSON = JSON.parse(item);
       this.state.items.listaJSONItems.push(itemJSON);
+      //this.obtenerCostoTotal();
       return (<Col>
         <CarritoCard
           id_articulo={itemJSON.id_articulo}
@@ -87,7 +94,8 @@ export default class CarrritoCards extends Component {
           precio={itemJSON.precio}
           cantidad={itemJSON.cantidad}
           tipo={itemJSON.tipo}
-          obtenerCostoTotal={this.obtenerCostoTotal} />
+          obtenerCostoTotal={this.obtenerCostoTotal}
+          actualizarJSONListaItems={this.actualizarJSONListaItems} />
       </Col>)
     })}
     

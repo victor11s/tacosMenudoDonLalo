@@ -27,6 +27,7 @@ export default function CarritoCard(props) {
         }
          console.log(comida)
          await setCookie(props.nombre, JSON.stringify(comida), 1);
+         await props.actualizarJSONListaItems(props.id_articulo, value);
          await props.obtenerCostoTotal();
     }
 
@@ -43,7 +44,8 @@ export default function CarritoCard(props) {
         console.log(comida);
         await setCookie(props.nombre, JSON.stringify(comida), 0);
         //eliminar la card de elemento borrado
-        props.obtenerCostoTotal();
+        await props.eliminarItem(props.id_articulo);
+        await props.obtenerCostoTotal();
         document.getElementById(props.id_articulo+"-div").remove();
 
     }
