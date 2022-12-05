@@ -98,6 +98,16 @@
   border: 1px solid black;
   /*Espacio inferior*/
   margin-bottom: 10px;
+
+}
+
+.NavB
+{
+  color: black;
+  /*No underline*/
+  text-decoration: none;
+  /*Add space to the left*/
+  padding-left: 10px;
 }
 
 /* Para menus persistentes: */
