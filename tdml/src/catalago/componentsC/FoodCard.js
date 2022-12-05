@@ -10,6 +10,22 @@ import NumericInput from 'react-numeric-input';
 
 export default function FoodCard(props) {
 
+    const tipo = props.tipo;
+
+    const boton = () => {
+        return (
+            <Row className='p-1'>
+                        <Col>
+                            <Form.Select name='tortilla' aria-label="Default select example" id='select' onLoad={disableSelect} >
+                                <option>Selecciona tu tortilla</option>
+                                <option value="Maiz">Maiz</option>
+                                <option value="Harina">Harina</option>
+                            </Form.Select>
+                        </Col>
+                    </Row>
+        )
+    }
+
     /* Funcion para deshabilitar el select*/
     function disableSelect() {
         if (props.tipo === 'Caldos') {
@@ -34,15 +50,7 @@ export default function FoodCard(props) {
                     <ListGroup.Item >Precio: <strong>${props.precio}</strong></ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
-                    <Row className='p-1'>
-                        <Col>
-                            <Form.Select name='tortilla' aria-label="Default select example" id='select' onLoad={disableSelect} >
-                                <option>Selecciona tu tortilla</option>
-                                <option value="Maiz">Maiz</option>
-                                <option value="Harina">Harina</option>
-                            </Form.Select>
-                        </Col>
-                    </Row>
+                    {tipo==='Tacos' ? boton() : null}
 
                     <Row className='p-1'>
                         <Col>

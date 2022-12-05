@@ -16,44 +16,44 @@ export default function Administrar() {
 
     
 
-    return (
-        <div>
-            <DefaultNavbar />
+        return (
+            <div>
+                <DefaultNavbar />
 
-            <Container className='mb-3'>
+                <Container className='mb-3'>
 
-                <Row className="d-flex justify-content-center m-5">
-                    <Col className='d-flex justify-content-center my-auto'>
-                        <h1>Administracion de Productos</h1>
-                    </Col>
-                </Row>
+                    <Row className="d-flex justify-content-center m-5">
+                        <Col className='d-flex justify-content-center my-auto'>
+                            <h1>Administracion de Productos</h1>
+                        </Col>
+                    </Row>
 
-                <Row className="d-flex justify-content-center m-5 FBBN">
-                    <Tabs
-                        defaultActiveKey="profile"
-                        id="justify-tab-example"
-                        className="mb-3"
-                        justify
-                        activeKey="taco"
-                    >
-                        <Tab eventKey="taco"  title="Agregar" >
-                            <Agregar />
-                        </Tab>
+                    <Row className="d-flex justify-content-center m-5 FBBN">
+                        <Tabs
+                            defaultActiveKey="taco"
+                            id="ControlledTabsExample"
+                            className="mb-3"
+                            justify
+                            
+                        >
+                            <Tab eventKey="taco" title="Agregar" >
+                                <Agregar />
+                            </Tab>
 
-                        <Tab eventKey="editar" title="Editar">
-                            <Editar/>
-                        </Tab>
-                        
-                    </Tabs>
-                </Row>
+                            <Tab eventKey="editar" title="Editar">
+                                <Editar />
+                            </Tab>
 
-            </Container>
+                        </Tabs>
+                    </Row>
 
-            
+                </Container>
 
 
 
 
-        </div>
-    )
-}
+
+
+            </div>
+        )
+    }
