@@ -6,6 +6,8 @@ import DefaultNavbar from '../globalComponents/defaultNavbar'
 
 import CarrritoCards from './CarrritoCards'
 
+import Paypal from './Paypal'
+
 export default function MainCarrito(props) {
     return (
         <div>
@@ -33,10 +35,9 @@ export default function MainCarrito(props) {
                     </Row>
 
                     <Row>
-                        <Col className="d-grid gap-2 mb-3">
-                            <Button variant="success" size="lg">
-                                Pagar
-                            </Button>
+                        <Col className="d-grid gap-2 mb-3 justify-content-center">
+                            <Paypal/>
+                            
                         </Col>
                     </Row>
 
