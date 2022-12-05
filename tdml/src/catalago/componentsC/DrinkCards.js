@@ -44,10 +44,10 @@ export default function DrinkCards() {
                             <DrinkCard
                                 key={bebida.id_articulo + '-DrinkCard'}
                                 id_articulo={bebida.id_articulo}
-                                imagen={imagenAguas}
                                 nombre={bebida.nombre}
                                 descripcion={bebida.descripción}
                                 precio={bebida.precio_unitario}
+                                imagen={imagenAguas}
                             />
                         </Col>
                     );

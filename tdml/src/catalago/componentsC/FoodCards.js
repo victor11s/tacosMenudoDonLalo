@@ -61,11 +61,12 @@ export default function FoodCards() {
                         <Col key={platillo.id_articulo + '-col'} >
                             <FoodCard
                                 key={platillo.id_articulo + '-foodCard'}
-                                imagen = {tacos}
+                                id_articulo={platillo.id_articulo}
                                 nombre = {platillo.nombre}
                                 precio = {platillo.precio_unitario}
-                                descripción = {platillo.descripción}
+                                descripcion = {platillo.descripción}
                                 tipo = {platillo.tipo}
+                                imagen = {tacos}
                             />
                         </Col>
                     );

@@ -28,7 +28,7 @@ export default function MainCarrito(props) {
 
                     <Row>
                         <Col className='d-flex justify-content-center my-auto mb-2'>
-                            <h1>Total:{props.total}</h1>
+                            <h1 id={'total-label'}>Total:{props.total}</h1>
                         </Col>
                     </Row>
 

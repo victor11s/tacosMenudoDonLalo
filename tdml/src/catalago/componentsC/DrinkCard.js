@@ -21,7 +21,6 @@ export default function DrinkCard(props) {
             cantidad: Cantidad,
             descripcion: descripcion,
             tipo: 'bebida',
-            imagen: imagen,
         }
         setCookie(nombre, JSON.stringify(bebida), 1);
         //obtener y mostrar las cookies

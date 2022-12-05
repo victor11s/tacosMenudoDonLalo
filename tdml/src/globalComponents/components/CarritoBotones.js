@@ -3,7 +3,6 @@ import carrito from './images/carrito.png'
 import Nav from 'react-bootstrap/Nav';
 import { Button } from 'react-bootstrap';
 
-import Carrito from '../../catalago/Carrito';
 
 import MainCarrito from '../../Carrito/MainCarrito';
 
@@ -19,7 +18,7 @@ export default function CarritoBotones() {
             <Nav className="me-auto aling ">
                 
                 <Nav.Link Style='max-width:40%'>
-                    <Carrito/>
+                    
                 </Nav.Link>
                 <Nav.Link className="d-inline-block align-text-middle">
                     <Button variant="light" onClick={logout}>Cerrar sesión</Button>

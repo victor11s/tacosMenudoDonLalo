@@ -1,14 +1,47 @@
-import React from 'react'
-
-
+import React, { useState } from 'react'
 import { Card, ListGroup, Row, Col, Button, Form } from 'react-bootstrap'
-
 import tacos from './images/tacos.jpg'
-
 import NumericInput from 'react-numeric-input';
 
-
 export default function FoodCard(props) {
+
+    //state para la informacion de la bebida
+    const [id, setId] = useState(props.id_articulo);
+    const [nombre, setNombre] = useState(props.nombre);
+    const [precio, setPrecio] = useState(props.precio);
+    const [Cantidad, setCantidad] = useState(1);
+    const [imagen, setImagen] = useState('./images/tacos-2.jpg');
+    const [descripcion, setDescripcion] = useState(props.descripcion);
+
+    //funcion para agregar al carrito
+    const agregar = () => {
+        const comida = {
+            id_articulo: id,
+            nombre: nombre,
+            precio: precio,
+            cantidad: Cantidad,
+            descripcion: descripcion,
+            tipo: 'comida',
+        }
+        setCookie(nombre, JSON.stringify(comida), 1);
+        //alerta que confirma que se agrego al carrito
+        alert('Se agrego al carrito');
+        //obtener y mostrar las cookies
+        console.log(document.cookie);
+    }
+
+
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      //funcion para actualizar la cantidad
+    const actualizarCantidad = async (value) => {
+        await setCantidad(value);
+    }
 
     const tipo = props.tipo;
 
@@ -55,13 +88,13 @@ export default function FoodCard(props) {
                     <Row className='p-1'>
                         <Col>
                             <p>Cantidad:</p>
-                            <NumericInput min={0} max={10} value={1} size={1} />
+                            <NumericInput min={0} max={10} defaultValue={1} size={1} onChange={actualizarCantidad}/>
                         </Col>
                     </Row>
 
                     <Row>
                         <Col className='d-grid gap-2 p-1 m-1'>
-                            <Button variant="warning" size='lg'>Agregar</Button>
+                            <Button variant="warning" size='lg' onClick={agregar}>Agregar</Button>
                         </Col>
                     </Row>
                 </Card.Body>

@@ -17,23 +17,18 @@ export default class CarrritoCards extends Component {
 
   state = {
     items: {
-      listaItems: []
+      listaItems: [],
+      listaJSONItems: []
 
     }
   }
-
-  handleChange = async e => {
-    await this.setState({
-      form:
-      {
-        ...this.state.form,
-        [e.target.name]: e.target.value
-      }
-    })
-  }
-
   //obtener los items de las cookies y añadirlos a la lista de items
   async componentDidMount() {
+
+    await this.obtenerCostoTotal();
+  }
+  //funcion para obtener las cookies de los items
+  async obtenerCookies() {
     const items = document.cookie.split(';');
     await this.setState({
       items:
@@ -42,6 +37,29 @@ export default class CarrritoCards extends Component {
         listaItems: items
       }
     })
+  }
+
+
+  costoTotal = 0;
+
+  // constante funcion para iterar en la lista de items y obtener el costo total
+  obtenerCostoTotal = async () => {
+    await this.obtenerCookies();
+    console.log(this.state.items.listaItems);
+    this.costoTotal=0;
+    this.state.items.listaItems.forEach((item) => {
+      //recortar el nombre del item
+      item = "{" + item.split('{')[1];
+      //convertir el string en un objeto JSON
+      const itemJSON = JSON.parse(item);
+      this.costoTotal += itemJSON.precio * itemJSON.cantidad;
+      console.log(this.costoTotal);
+      this.editarTotal();
+    });
+  }
+  //funcion para editar la etiqueta del total
+  editarTotal(){
+    document.getElementById('total-label').textContent = "Total: "+this.costoTotal;
   }
   render() {
     return (
@@ -53,14 +71,16 @@ export default class CarrritoCards extends Component {
             item = "{" + item.split('{')[1];
             //convertir el string en un objeto JSON
             const itemJSON = JSON.parse(item);
-            console.log(itemJSON);
+            this.state.items.listaJSONItems.push(itemJSON);
             return (<Col>
               <CarritoCard
+                id_articulo={itemJSON.id_articulo}
                 nombre={itemJSON.nombre}
+                descripcion={itemJSON.descripcion}
                 precio={itemJSON.precio}
                 cantidad={itemJSON.cantidad}
                 tipo={itemJSON.tipo}
-                imagen={itemJSON.imagen} />
+                obtenerCostoTotal={this.obtenerCostoTotal} />
             </Col>)
           })}
 
