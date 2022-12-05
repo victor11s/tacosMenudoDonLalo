@@ -19,7 +19,7 @@ export default function Seleccion() {
             <Row>
                 <Col className="m-5 BordeNegro" >
                     <h5>
-                        Selecciona tu categoria
+                        Selecciona tu categoría
                     </h5>
 
 

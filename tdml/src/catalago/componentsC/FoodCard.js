@@ -38,11 +38,11 @@ export default function FoodCard(props) {
 
     return (
         <div>
-            <Card style={{ width: '15rem'}} className='square rounded-5 border-secondary mb-4'>
+            <Card style={{ width: '16rem'}} className='square rounded-5 border-secondary mb-4'>
                 <Card.Img src={props.imagen} />
                 <Card.Body>
-                    <Card.Title >{props.nombre}</Card.Title>
-                    <Card.Text>
+                    <Card.Title className='LNC'>{props.nombre}</Card.Title>
+                    <Card.Text className='ST'>
                         {props.descripción}
                     </Card.Text>
                 </Card.Body>
