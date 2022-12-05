@@ -84,7 +84,7 @@ export default function Editar() {
                                 <td>{elemento.stock}</td>
                                 <td>{elemento.tipo}</td>
                                 <td>{elemento.imagen}</td>
-                                <td><button type="button" className="btn btn-primary m-1" onClick={handleShow}>Editar</button>
+                                <td>
                                     <button type="button" class="btn btn-danger" id={elemento.id_articulo} onClick={deleteArticle}>Eliminar</button></td>
                             </tr>
                         );
