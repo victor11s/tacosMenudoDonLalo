@@ -87,6 +87,7 @@ export default class Agregar extends Component {
                     console.log(success);
                     if (success) {
                         alert("Se agrego correctamente");
+                        window.location.reload();
                     } else {
                         alert("No se agrego correctamente");
                     }
