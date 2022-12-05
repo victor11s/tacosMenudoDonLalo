@@ -8,7 +8,7 @@ const Paypal = () => {
     <PayPalCheckout
       clientId='AeIKI84FQ7jy_GvjZNXetrwL-PRIqLuJKFt-aI3jKqXvkKj2fJult-2RVtf03GN_Co4trcItzLvQvsx7'
       amount={100}
-      currency='USD'
+      currency='MXN'
       onSuccess={(data, order) => {
         console.log(data, order)
       }}
