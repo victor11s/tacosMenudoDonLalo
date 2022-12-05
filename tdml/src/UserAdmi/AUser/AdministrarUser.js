@@ -20,7 +20,7 @@ export default function AdministrarUser() {
 
                 <Row className="d-flex justify-content-center m-5 FBBN">
                     <Tabs
-                        defaultActiveKey="profile"
+                        defaultActiveKey="PersonalInfo"
                         id="justify-tab-example"
                         className="mb-3"
                         justify
