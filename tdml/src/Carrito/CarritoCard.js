@@ -44,7 +44,7 @@ export default function CarritoCard(props) {
         console.log(comida);
         await setCookie(props.nombre, JSON.stringify(comida), 0);
         //eliminar la card de elemento borrado
-        await props.eliminarItem(props.id_articulo);
+        await props.actualizarJSONListaItems(props.id_articulo,0);
         await props.obtenerCostoTotal();
         document.getElementById(props.id_articulo+"-div").remove();
 

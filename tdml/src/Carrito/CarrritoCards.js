@@ -59,7 +59,7 @@ export default class CarrritoCards extends Component {
   }
   //Filtra los items que estan en el listaJSONItems y cambia el atributo cantidad
   actualizarJSONListaItems = async (id, cantidad) => {
-    await this.state.items.listaJSONItems.filter((item) => {
+    await this.state.items.listaJSONItems.map((item) => {
       if (item.id_articulo == id) {
         item.cantidad = cantidad;
       }
