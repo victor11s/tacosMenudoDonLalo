@@ -19,7 +19,7 @@ router.get('/getCaldos', function (req, res) {
 });
 
 router.get('/getRefrescos', function (req, res) {
-    const sqlQuery = "SELECT * FROM articulo WHERE tipo = 'Refrescos'";
+    const sqlQuery = "SELECT * FROM articulo WHERE tipo = 'Bebidas'";
     db.query(sqlQuery, (error, result) => {
         res.send(result);
     });
