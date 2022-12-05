@@ -125,9 +125,11 @@ router.post('/delete' , function (req, response) {
 });
 
 //Usuarios
-router.get('/getAdmin', function (req, res) {
-    const sqlQuery = "SELECT nombre_usuario, nombre, direccion FROM usuario WHERE tipo = 'admin';";
-    db.query(sqlQuery, (error, result) => {
+router.post('/getAdmin', function (req, res) {
+    const nombre_usuario = req.body.id;
+    console.log(nombre_usuario);
+    const sqlQuery = "SELECT nombre_usuario, nombre, direccion FROM usuario WHERE nombre_usuario = (?);";
+    db.query(sqlQuery, [nombre_usuario], (error, result) => {
         res.send(result);
     });
 });

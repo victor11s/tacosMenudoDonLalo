@@ -4,6 +4,7 @@ import LandingPage from './landingPage/LandingPage';
 import Catalogo from './/catalago/Catalago';
 import Login from './login/login';
 import Signin from './login/Signin';
+import PayPal from './Carrito/Paypal';
 
 
 
@@ -27,7 +28,7 @@ const App = () => {
           <Route path='/administrar' element={<Administrar/>} />
           <Route path='/administrarUser' element={<AdministrarUser/>} />
           <Route path='/carrito' element={<MainCarrito/>} />
-          
+          <Route path="/checkout/:nombre_usuario/:amount/" element={<PayPal />} />
 
           
         </Routes>

@@ -10,12 +10,16 @@ let ligaAxios = 'http://localhost:3001/api/';
 
 export default function AdministrarUser() {
     const [user, setUser] = React.useState([])
+    
 
     useEffect(() => {
         // Obteniendo usuario de la base de datos 
         async function getUser() {
-            await Axios.get(ligaAxios + 'getAdmin')
-                .then( async (response) => {
+            const userID = localStorage.getItem('nombre_usuario');
+            console.log(userID);
+            await Axios.post(ligaAxios + 'getAdmin', {
+                id: userID,
+            }).then( async (response) => {
                     if (response.data[0] !== undefined) { //Condicion que sirve para validar datos de retorno
                         await setUser(response.data[0]);
                         //console.log(response.data)

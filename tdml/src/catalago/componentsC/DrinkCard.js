@@ -23,6 +23,7 @@ export default function DrinkCard(props) {
             tipo: 'bebida',
         }
         setCookie(nombre, JSON.stringify(bebida), 1);
+        alert('Se agrego al carrito');
         //obtener y mostrar las cookies
         console.log(document.cookie);
     }
