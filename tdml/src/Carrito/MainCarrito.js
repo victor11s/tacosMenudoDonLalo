@@ -1,12 +1,25 @@
 import React from 'react'
 
-import { Card, ListGroup, Row, Col, Button, Form, Nav, Container, Tab, Tabs } from 'react-bootstrap'
+import { Card, ListGroup, Row, Col, Button, Form, Nav, Container, Tab, Tabs, NavLink } from 'react-bootstrap'
 
 import DefaultNavbar from '../globalComponents/defaultNavbar'
 
 import CarrritoCards from './CarrritoCards'
 
+import Paypal from './Paypal'
+
 export default function MainCarrito(props) {
+    let estadoBoton = '';
+    let nombre_usuario = localStorage.getItem('nombre_usuario');
+    //state para el total a pagar
+    const [total, setTotal] = React.useState(0);
+    //Handler para actualizar el total
+    const actualizarTotal = async (total) => {
+        await setTotal(total);
+        console.log(total);
+        //window.location.reload();
+    }
+    {total==0 ? estadoBoton = true : estadoBoton = false}
     return (
         <div>
             <DefaultNavbar />
@@ -22,22 +35,29 @@ export default function MainCarrito(props) {
 
                 <Container className='FondoBlanco BordeNegro '>
                     <Row className='m-1'>
-                        <CarrritoCards />
+                        <CarrritoCards actualizarTotal={actualizarTotal} />
                     </Row>
 
 
                     <Row>
                         <Col className='d-flex justify-content-center my-auto mb-2'>
-                            <h1>Total:{props.total}</h1>
+                            <h1 id={'total-label'}>Total:{total}</h1>
                         </Col>
                     </Row>
 
                     <Row>
-                        <Col className="d-grid gap-2 mb-3">
-                            <Button variant="success" size="lg">
-                                Pagar
-                            </Button>
+                        <Col>
+                        {/* Boton para hacer el check out: */}
+                        <div className="d-grid gap-2">
+                        <Button href={`/checkout/${nombre_usuario}/${total}/`} className='mb-3' variant='danger' disabled={estadoBoton}>
+                            Proceder pago
+
+                        </Button>
+
+                        </div>
+                        
                         </Col>
+                        
                     </Row>
 
 

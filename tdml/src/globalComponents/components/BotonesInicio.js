@@ -12,15 +12,6 @@ export default function BotonesInicio() {
                 <Nav.Link href="/signin">
                     <Button variant="outline-secondary">Registrarse</Button>
                 </Nav.Link>
-                <Nav.Link href="/administrar">
-                    <Button variant="outline-secondary">Administrar</Button>
-                </Nav.Link>
-                <Nav.Link href="/administrarUser">
-                    <Button variant="outline-secondary">Mi Perfil</Button>
-                </Nav.Link>
-                <Nav.Link href="/carrito">
-                    <Button variant="outline-secondary">Carrito</Button>
-                </Nav.Link>
             </Nav>
         </div>
     )

@@ -13,6 +13,7 @@ export default class SigninForm extends Component {
             "password": "",
             "password_confirm": "",
             "direccion": "",
+            "nombre": "",
         },
         showModal: false
     }
@@ -34,7 +35,8 @@ export default class SigninForm extends Component {
                 {
                     nombre_usuario: this.state.form.nombre_usuario,
                     password: this.state.form.password,
-                    direccion: this.state.form.direccion
+                    direccion: this.state.form.direccion,
+                    nombre: this.state.form.nombre
                 }).then(async res => {
                     let authorization = res.data;
                     //console.log(authorization);
@@ -105,6 +107,11 @@ export default class SigninForm extends Component {
                     <Form.Group className="mb-3" controlId="formPassword2">
                         <Form.Label>Repetir contraseña</Form.Label>
                         <Form.Control name="password_confirm" type="password" placeholder="Repetir contraseña"
+                            defaultValue={""} onChange={this.handleChange} required />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formNombre">
+                        <Form.Label>Calle y Número</Form.Label>
+                        <Form.Control name="nombre" type="text" placeholder="Nombvre y apellido"
                             defaultValue={""} onChange={this.handleChange} required />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formAddress">

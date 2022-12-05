@@ -34,10 +34,11 @@ router.post('/signin', (req, response) => {
     const nombre_usuario = req.body.nombre_usuario;
     const password = req.body.password;
     const direccion = req.body.direccion;
+    const nombre = req.body.nombre;
     console.log("Datos: "+nombre_usuario +" && "+ password)
     if (nombre_usuario != undefined && password != undefined) {
-        const sqlQuery = "CALL RegistroUsuario((?),(?),(?))";
-        db.query(sqlQuery, [nombre_usuario, password, direccion], (error, result) => {
+        const sqlQuery = "CALL RegistroUsuario((?),(?),(?),(?))";
+        db.query(sqlQuery, [nombre_usuario, password, direccion, nombre], (error, result) => {
             // console.log(result); 
             if (error) throw error;
             if (result[0] == undefined) { //mysl retorna undefined si se insertó correctamente.
