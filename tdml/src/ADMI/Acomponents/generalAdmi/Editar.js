@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 import EditarModal1 from './modal/EditarModal1.js';
 
@@ -47,7 +47,7 @@ export default function Editar() {
         async function getTabla() {
             await Axios.get(ligaAxios + "getTablaEditar").then((response) => {
                 console.log(response.data[0])
-                if (response.data[0] != undefined) {
+                if (response.data[0] !== undefined) {
                     setArticulosLista(response.data);
                 }
                 else {

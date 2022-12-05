@@ -28,6 +28,7 @@ export default function Administrar() {
                         </Col>
                     </Row>
 
+            
                     <Row className="d-flex justify-content-center m-5 FBBN">
                         <Tabs
                             defaultActiveKey="taco"

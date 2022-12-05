@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const db = require('../db');
 
+//Aritculos
+
 router.get('/get-articulos', function (req, res) {
     const sqlQuery = "SELECT * FROM articulo;";
     db.query(sqlQuery, (error, result) => {
@@ -113,6 +115,30 @@ router.post('/delete' , function (req, response) {
     const id_articulo = req.body.id;
     const sqlQuery = "DELETE FROM articulo WHERE id_articulo = (?);";
     db.query(sqlQuery,[id_articulo], (error, result) => {
+        if (error) throw error;
+        if (result.affectedRows > 0) {
+            response.send(true);
+        } else {
+            response.send(false);
+        }
+    });
+});
+
+//Usuarios
+router.get('/getAdmin', function (req, res) {
+    const sqlQuery = "SELECT nombre_usuario, nombre, direccion FROM usuario WHERE tipo = 'admin';";
+    db.query(sqlQuery, (error, result) => {
+        res.send(result);
+    });
+});
+
+router.post('/updateUser' , function (req, response) {
+    const nombre_usuario = req.body.id;
+    const nombre = req.body.nombre;
+    const direccion = req.body.direccion;
+    console.log([nombre, direccion, nombre_usuario]);
+    const sqlQuery = "UPDATE usuario SET nombre = (?), direccion = (?) WHERE nombre_usuario = (?);";
+    db.query(sqlQuery,[nombre, direccion, nombre_usuario], (error, result) => {
         if (error) throw error;
         if (result.affectedRows > 0) {
             response.send(true);
