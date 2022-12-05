@@ -31,7 +31,7 @@ export default function CarritoCard(props) {
     }
 
     //funcion para borrar un item de las cookies
-    const borrar = () => {
+    const borrar = async () => {
         const comida = {
             id_articulo: props.id_articulo,
             nombre: props.nombre,
@@ -40,10 +40,12 @@ export default function CarritoCard(props) {
             descripcion: props.descripcion,
             tipo: props.tipo,
         }
-        console.log(comida)
-        setCookie(props.nombre, JSON.stringify(comida), 0);
+        console.log(comida);
+        await setCookie(props.nombre, JSON.stringify(comida), 0);
         //eliminar la card de elemento borrado
+        props.obtenerCostoTotal();
         document.getElementById(props.id_articulo+"-div").remove();
+
     }
 
 

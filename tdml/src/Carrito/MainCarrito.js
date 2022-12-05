@@ -12,9 +12,10 @@ export default function MainCarrito(props) {
     //state para el total a pagar
     const [total, setTotal] = React.useState(0);
     //Handler para actualizar el total
-    const actualizarTotal = (total) => {
-        setTotal(total);
+    const actualizarTotal = async (total) => {
+        await setTotal(total);
         console.log(total);
+        //window.location.reload();
     }
     return (
         <div>
